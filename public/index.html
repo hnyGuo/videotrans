@@ -11,7 +11,9 @@
 		<!-- Bootstrap Core CSS -->
 		<link href="stylesheets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<!-- Template CSS -->
-		<link href="stylesheets/template/freelancer.min.css" rel="stylesheet">
+		<link href="stylesheets/template/freelancer.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="stylesheets/style.css" rel="stylesheet">
 		<!-- Custom Fonts -->
 		<link href="stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -58,15 +60,19 @@
 		</nav>
 
 		<!-- Header -->
-		<header>
+		<header style="background-image:url(./images/bg-main.jpg)">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
-						<img class="img-responsive" src="images/profile.png" alt="Logo">
+					<div class="col-lg-6">
+						<canvas id="rgb-video" width="640" height="480">抱歉，您的浏览器不支持Canvas元素。</canvas>
 						<div class="intro-text">
-							<span class="name">视频播放界面</span>
-							<hr class="star-light">
-							<span class="skills">Web Developer - Graphic Artists - User Experience Designer</span>
+							<span class="skills">RGB图像</span>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<canvas id="inf-video" width="640" height="480">抱歉，您的浏览器不支持Canvas元素。</canvas>
+						<div class="intro-text">
+							<span class="skills">红外图像</span>
 						</div>
 					</div>
 				</div>
@@ -86,12 +92,11 @@
 		</section>
 
 		<!-- About Section -->
-		<section class="success" id="about">
+		<section class="bg-img1" id="about" style="background-image:url(./images/bg-3.jpg)">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
 						<h2>关于</h2>
-						<hr class="star-light">
 					</div>
 				</div>
 				<div class="row">
@@ -144,9 +149,10 @@
 	<script src="stylesheets/bootstrap/js/bootstrap.min.js"></script>
 	<!-- Plugin JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
 	<!-- Theme JavaScript -->
-	<script src="js/freelancer.min.js"></script>
+	<script src="js/freelancer.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="app.js"></script>
 
 	</body>
 </html>
