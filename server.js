@@ -13,7 +13,7 @@ app.use(express.static(configServer.staticFolder));
 app.use(morgan('dev'));
 
 // serve index
-require('./lib/routes').serveIndex(app, configServer.staticFolder);
+require('./lib/routes/index').serveIndex(app, configServer);
 
 // HTTP server
 var server = http.createServer(app);
