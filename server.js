@@ -9,7 +9,7 @@ var configServer = require('./lib/config/server');
 // app parameters
 var app = express();
 app.set('port', configServer.httpPort);
-app.use(express.static(configServer.staticFolder));
+app.use(express.static('public'));
 app.use(morgan('dev'));
 
 // serve index
@@ -20,6 +20,7 @@ var server = http.createServer(app);
 server.listen(app.get('port'), function () {
   console.log('HTTP server listening on port ' + app.get('port'));
 });
+
 
 // WebSocket server
 var io = require('socket.io')(server);

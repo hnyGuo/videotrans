@@ -2,7 +2,7 @@
 	"use strict";
 
 	// MODIFY THIS TO THE APPROPRIATE URL IF IT IS NOT BEING RUN LOCALLY
-	var socket = io.connect('http://localhost');
+	var socket = io.connect('http://localhost1');
 
 	var canvas = document.getElementById('rgb-video');
 	var context = canvas.getContext('2d');
@@ -25,10 +25,9 @@
 	});
 
 	$('#save-image').click(function(){
-		$.get("/save-image",function(data,status){
+		$.get("http://localhost:8080/save-image",function(data,status){
 			alert("data:"+data+"\nstatus:"+status);
 		});
-		alert('save now');
 	});
 	
 })(jQuery);
