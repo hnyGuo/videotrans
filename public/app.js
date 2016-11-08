@@ -2,7 +2,7 @@
 	"use strict";
 
 	// MODIFY THIS TO THE APPROPRIATE URL IF IT IS NOT BEING RUN LOCALLY
-	var socket = io.connect('http://localhost1');
+	var socket = io.connect('http://localhost');
 
 	var canvas = document.getElementById('rgb-video');
 	var context = canvas.getContext('2d');
