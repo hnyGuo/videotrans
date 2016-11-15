@@ -1,0 +1,1 @@
+cmd_Release/obj.target/camera.node := g++ -shared -pthread -rdynamic -m64 -L/usr/share/lib  -Wl,-soname=camera.node -o Release/obj.target/camera.node -Wl,--start-group Release/obj.target/camera/src/camera.o -Wl,--end-group -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_video -lopencv_ml

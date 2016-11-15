@@ -9,3 +9,38 @@ canvas {
 		margin-right:0px;
 	}
 }
+
+ div#captures {
+            height: 100%;
+            right: 0px;
+            top: 0px;
+            background-color: #CCC;
+            width: 300px;
+            position: absolute;
+            overflow-y: scroll;
+        }
+        
+div.captured-frame {
+    width: 250px;
+    height: 140px;
+    margin: 10px 25px 10px 25px;
+    box-shadow: 0px 0px 50px #111;
+}
+
+div.captured-frame img {
+    width: 250px;
+    height: 140px;
+    background-color: #444;
+    border-style: none;
+}
+
+div.captured-frame .frame-title {
+    width: 210px;
+    height: 20px;
+    padding: 10px 20px 10px 20px;
+    
+    position: relative;
+    bottom: 40px;
+    
+}
+        
