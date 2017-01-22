@@ -4,7 +4,7 @@
             "target_name": "camera",
             "sources": ["src/camera.cpp"],
             "link_settings": {
-                "libraries": ["-lopencv_core", "-lopencv_highgui", "-lopencv_imgproc", "-lopencv_video", "-lopencv_ml"]
+                "libraries": ["opencv_core2411d.lib", "opencv_highgui2411d.lib", "opencv_imgproc2411d.lib", "opencv_video2411d.lib", "opencv_ml2411d.lib"]
             },
             "cflags": [
                 "-g", "-std=c++11", "-Wall"
@@ -37,6 +37,16 @@
                         'GCC_ENABLE_CPP_EXCEPTIONS': 'YES',
                         'GCC_ENABLE_CPP_RTTI': 'YES'
                     }
+                }],
+                ['OS=="win32"', {
+                    'include_dirs': [
+                        'D:/opencv/build/include'
+                        ],
+                    'link_settings': {
+                        'library_dirs': ['D:/opencv/build/x64/vc14/lib']
+                    },
+                    'cflags!': ['-fno-exceptions'],
+                    'cflags_cc!': ['-fno-rtti', '-fno-exceptions']
                 }]
             ]
     }

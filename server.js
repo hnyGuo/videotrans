@@ -3,7 +3,7 @@ var express = require('express')
   , http = require('http')
   , morgan = require('morgan')
   , WebSocketServer = require("ws").Server
-  , cam = require("./build/Release/camera.node")
+  , cam = require("./build/Release/camera")
   , fs = require("fs")
   , websocketPort = 8088
   , webPort = 8080
@@ -100,7 +100,7 @@ app.use(express.static('public'));
 app.use(morgan('dev'));
 
 app.get('/',function(req,res){
-    res.sendFile("/home/robot/videotrans/index.html");   
+    res.sendFile(__dirname+'/index.html');   
       console.log('new connection'); 
   });
 
