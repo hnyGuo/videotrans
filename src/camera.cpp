@@ -47,7 +47,7 @@ struct AsyncMessage {
 
 TMessage *message;
 
-void updateAsync(uv_async_t* req, int status) {
+void updateAsync(uv_async_t* req, int status) {           //运行在uv_default_loop即主线程中，进行js函数异步回调
     
     Isolate* isolate = Isolate::GetCurrent();
     HandleScope scope(isolate);
@@ -78,8 +78,8 @@ void updateAsync(uv_async_t* req, int status) {
     delete asyncMessage;
 }
 
-void CameraOpen(uv_work_t* req) {
-    TMessage* message = (TMessage*) req->data;
+void CameraOpen(uv_work_t* req) {                  //运行在子线程中，读取摄像头数据并通过uv_async_send发给主线程
+    TMessage* message = (TMessage*) req->data;     //全局变量的message传递给局部变量
     
     cv::Mat tmp, rsz;
     
@@ -89,8 +89,7 @@ void CameraOpen(uv_work_t* req) {
         msg->image = std::vector<unsigned char>();
         msg->window = message->window;
         
-        //Capture Frame From WebCam
-        message->capture->read(tmp);
+        message->capture->read(tmp);             //读取图像
         
         if(message->resize) {
             cv::Size size = cv::Size(message->width,message->height);
@@ -114,7 +113,7 @@ void CameraOpen(uv_work_t* req) {
         
         //Encode to jpg
         if(message->resize) {
-            cv::imencode(".jpg",rsz,msg->image,compression_parameters);   
+            cv::imencode(".jpg",rsz,msg->image,compression_parameters);   //压缩后是一个vector<unsigned char>
         } else {
             cv::imencode(".jpg",tmp,msg->image,compression_parameters);
         }
@@ -174,7 +173,7 @@ void Open(const FunctionCallbackInfo<Value>& args) {
     
     //Default Arguments
     message->codec = std::string(".jpg");
-    Local<Value> input = Number::New(isolate,0);
+    Local<Value> input = Number::New(isolate,0);  //摄像头Index  
     std::string inputString;
     
     //Check if size is passed
@@ -236,7 +235,7 @@ void Close(const FunctionCallbackInfo<Value>& args) {
     
     m_brk = 0;
     uv_loop_close(loop);
-    uv_close((uv_handle_t *) &async, NULL);
+    //uv_close((uv_handle_t *) &async, NULL);
     cv::destroyWindow("Preview");
     args.GetReturnValue().Set(String::NewFromUtf8(isolate,"ok"));
 }

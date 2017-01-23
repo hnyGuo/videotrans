@@ -4,7 +4,7 @@
             "target_name": "camera",
             "sources": ["src/camera.cpp"],
             "link_settings": {
-                "libraries": ["opencv_core2411d.lib", "opencv_highgui2411d.lib", "opencv_imgproc2411d.lib", "opencv_video2411d.lib", "opencv_ml2411d.lib"]
+                "libraries": ["opencv_world320.lib"]
             },
             "cflags": [
                 "-g", "-std=c++11", "-Wall"
