@@ -236,7 +236,7 @@ void Close(const FunctionCallbackInfo<Value>& args) {
     
     m_brk = 0;
     uv_loop_close(loop);
-    uv_close((uv_handle_t *) &async, NULL);
+    //uv_close((uv_handle_t *) &async, NULL);
     cv::destroyWindow("Preview");
     args.GetReturnValue().Set(String::NewFromUtf8(isolate,"ok"));
 }
