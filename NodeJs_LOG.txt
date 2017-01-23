@@ -1,0 +1,13 @@
+﻿2017-1-22
+Node.js在Win10的开发环境配置：
+1.安装VS2015
+2.安装Python
+3.安装Git bash
+4.安装Node.js
+5.配置环境变量
+6.安装node-gyp (https://github.com/nodejs/node-gyp)
+7.使用node-gyp编译C++插件时会提示找不到Windows SDK 8.1，双击打开solution,VS2015会提示缺少哪些文件，直接安装即可。
+8.直接在VS2015(vc14)里面配置OpenCV，不用在binding.gyp里面配置，其他的库同理。
+
+2017-1-23
+注释掉Close函数中uv_close((uv_handle_t *) &async, NULL)这一行之后，解决了关闭摄像头时服务器崩溃的问题。
