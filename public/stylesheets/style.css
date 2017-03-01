@@ -10,37 +10,61 @@ canvas {
 	}
 }
 
- div#captures {
-            height: 100%;
-            right: 0px;
-            top: 0px;
-            background-color: #CCC;
-            width: 300px;
-            position: absolute;
-            overflow-y: scroll;
-        }
+div#captures {
+            /*width: 320px;*/
+            height: auto;
+            left: 0px;
+            background-color: rgba(255,255,255,.1);
+            position: relative;
+            /*overflow-y: scroll;*/
+}
         
 div.captured-frame {
-    width: 250px;
+    /*width: 250px;
     height: 140px;
     margin: 10px 25px 10px 25px;
-    box-shadow: 0px 0px 50px #111;
+    box-shadow: 0px 0px 50px #111;*/
 }
 
-div.captured-frame img {
-    width: 250px;
-    height: 140px;
+div#frame-image {
+    width: 320px;
+    height: 240px;
     background-color: #444;
     border-style: none;
+    margin: 0px 0px 0px 0px;
 }
 
-div.captured-frame .frame-title {
-    width: 210px;
-    height: 20px;
-    padding: 10px 20px 10px 20px;
-    
+div.frame-title {
+    width: 320px;
+    height: 10px;
+    padding: 0px 0px 0px 0px;
     position: relative;
     bottom: 40px;
-    
+}
+
+.btn span.glyphicon {               
+    opacity: 0;             
+}
+.btn.active span.glyphicon {                
+    opacity: 1;             
+}
+
+.btn-search{
+    color: #333333;
+    font-size: 20px;
+    border: solid 2px #333333;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    /*margin-top: 10px;*/
+    margin-bottom: 10px;
+}
+
+.btn-search:hover,
+.btn-search:focus,
+.btn-search:active,
+.btn-search.active {
+  color: #ffffff;
+  background: #18bc9c;
+  border: solid 2px #333333;
 }
         

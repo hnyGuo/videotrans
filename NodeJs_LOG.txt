@@ -7,7 +7,21 @@ Node.js在Win10的开发环境配置：
 5.配置环境变量
 6.安装node-gyp (https://github.com/nodejs/node-gyp)
 7.使用node-gyp编译C++插件时会提示找不到Windows SDK 8.1，双击打开solution,VS2015会提示缺少哪些文件，直接安装即可。
-8.直接在VS2015(vc14)里面配置OpenCV，不用在binding.gyp里面配置，其他的库同理。
+8.直接在VS2015(vc14)里面配置OpenCV（3.2.0），不用在binding.gyp里面配置，其他的库同理。
 
 2017-1-23
 注释掉Close函数中uv_close((uv_handle_t *) &async, NULL)这一行之后，解决了关闭摄像头时服务器崩溃的问题。
+
+2017-2-25
+在安装MySQL的过程中会提示缺少Python3.4导致Python的connector无法安装，如果不用Python去链接数据库的话，这个问题可直接忽略。
+
+2017-2-28
+create table images(id int auto_increment,image_id varchar(30) not null,image_class varchar(20) not null,submission_date timestamp,primary key(id),unique key(image_id));
+
+<div id=\"captures\" class=\"captured-frame\">
+	<img class=\"frame-image\" src=\"##src\" />
+	<div class=\"frame-title\">
+		<a href=\"##href\" download=\"##title\">##title</a>
+	</div>
+</div>
+每一张照片都以<div>的形式存在，并且id均为captures，新的照片会替换旧的照片。

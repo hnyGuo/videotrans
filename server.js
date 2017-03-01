@@ -2,9 +2,11 @@
 var express = require('express')
   , http = require('http')
   , morgan = require('morgan')
-  , WebSocketServer = require("ws").Server
-  , cam = require("./build/Release/camera")
-  , fs = require("fs")
+  , WebSocketServer = require('ws').Server
+  , cam = require('./build/Release/camera')
+  , fs = require('fs')
+  , multer = require('multer')
+  , query = require('./query.js')
   , websocketPort = 8088
   , webPort = 8080
   , openBrowser = false
@@ -18,6 +20,28 @@ var wss = new WebSocketServer({
 });
 
 var clients = {};
+
+var createFolder = function(folder){
+  try{
+    fs.accessSync(folder);
+  }catch(e){
+    fs.mkdirSync(folder);
+  }
+};
+
+var uploadFolder = './upload';
+createFolder(uploadFolder);
+
+var storage = multer.diskStorage({
+  destination:function(req,file,cb){
+    cb(null,uploadFolder);
+  },
+  filename:function(req,file,cb){
+    cb(null,file.originalname);
+  }
+});
+
+var upload = multer({storage:storage});
 
 var frameCallback = function (image){
 	var frame = {
@@ -80,7 +104,6 @@ wss.on('connection', function (ws) {
         case "size":
             {
                 var size = cam.GetPreviewSize();
-
                 ws.send(JSON.stringify({
                     type: "size",
                     width: size.width,
@@ -90,7 +113,6 @@ wss.on('connection', function (ws) {
             break;
         }
     });
-
 });
 
 // app parameters
@@ -101,14 +123,63 @@ app.use(morgan('dev'));
 
 app.get('/',function(req,res){
     res.sendFile(__dirname+'/index.html');   
-      console.log('new connection'); 
-  });
+    console.log('new connection'); 
+});
 
 /*app.get('/save-image',function(req,res){
-	require('./socket').saveImage();
-	res.send('save-success');
-	console.log('save-image');
+	query('SELECT * from images',function(err,results,fields){
+    console.log(results);
+  });
+  res.send('success');
 });*/
+
+app.post('/upload',upload.single(),function(req,res){
+  var imageId = req.body.id;
+  var imageClass = req.body.class;
+  var imgData = req.body.image;
+  var base64Data = imgData.replace(/^data:image\/\w+;base64,/,"");
+  var dataBuffer = new Buffer(base64Data,'base64');
+
+  var post = {
+    image_id : imageId,
+    image_class : imageClass 
+  };
+
+  query('INSERT INTO images SET ?',post,function(err,results,fields){
+    if (err){
+      console.log(err.message);
+      res.send(err);
+    }else{
+      console.log('insert success');
+      fs.writeFile("./public/upload/"+req.body.id+".jpg",dataBuffer,function(err){
+      if(err){
+        res.send(err);
+      }else{
+        res.send("upload successful!");
+      }
+      });
+    }
+  });
+});
+
+app.post('/search',upload.single(),function(req,res){
+  var searchClass = req.body.class;
+  console.log(searchClass);
+  var post = {
+    image_class : searchClass
+  };
+  query('SELECT image_id FROM images WHERE ?',post,function(err,results,fields){
+    if(err){
+      console.log(err.message);
+      res.send(err);
+    }else{
+      console.log(results);
+      var length = results.length;
+      console.log('The number of results is: ',length);
+    }
+  });
+  res.send('search test');
+});
 
 // HTTP server
 var server = http.createServer(app);

@@ -62,36 +62,78 @@
 		<header style="background-image:url(./images/bg-main.jpg)">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
-						<canvas id="rgb-video" width="640" height="480">抱歉，您的浏览器不支持Canvas元素。</canvas>
+					<div class="col-sm-4">
+						<canvas id="rgb-video" width="320" height="240">抱歉，您的浏览器不支持Canvas元素。</canvas>
 						<div class="intro-text">
 							<span class="skills">RGB图像</span>
 						</div>
 						<div class="row">
-							<div class="col-sm-4">
+							<div class="col-xs-4">
                     			<a id='play' class="btn btn-sm btn-outline">
                         		<i class="fa fa-play"></i>
                     			</a>
                 			</div>
-                			<div class="col-sm-4">
+                			<div class="col-xs-4">
                     			<a id='pause' class="btn btn-sm btn-outline">
                         		<i class="fa fa-pause"></i>
                     			</a>
                 			</div>
-							<div class="col-sm-4">
+							<div class="col-xs-4">
                     			<a id='save-image' class="btn btn-sm btn-outline">
                         		<i class="fa fa-camera-retro"></i> 拍照
                     			</a>
                 			</div>
 						</div>
-						
 					</div>
-					<div class="col-md-6">
-						<canvas id="inf-video" width="640" height="480">抱歉，您的浏览器不支持Canvas元素。</canvas>
+
+					<div class="col-sm-4">
+						<canvas id="inf-video" width="320" height="240">抱歉，您的浏览器不支持Canvas元素。</canvas>
 						<div class="intro-text">
 							<span class="skills">红外图像</span>
 						</div>
+
 					</div>
+					<div class="col-sm-4">
+						<div id="captures">
+    					</div>
+						<div class="intro-text">
+						<span class="skills">图像分类</span>
+						</div>
+						<div id="image-class" class="btn-group" data-toggle="buttons">
+							<label class="btn btn-success active">
+								<input type="radio" name="options" id="A" value="classA" autocomplete="off" checked>
+								<span class="glyphicon glyphicon-ok"></span>
+							</label>
+
+							<label class="btn btn-primary">
+								<input type="radio" name="options" id="B" value="classB" autocomplete="off">
+								<span class="glyphicon glyphicon-ok"></span>
+							</label>
+
+							<label class="btn btn-info">
+								<input type="radio" name="options" id="C" value="classC" autocomplete="off">
+								<span class="glyphicon glyphicon-ok"></span>
+							</label>
+
+							<label class="btn btn-default">
+								<input type="radio" name="options" id="D" value="classD" autocomplete="off">
+								<span class="glyphicon glyphicon-ok"></span>
+							</label>
+
+							<label class="btn btn-warning">
+								<input type="radio" name="options" id="E" value="classE" autocomplete="off">
+								<span class="glyphicon glyphicon-ok"></span>
+							</label>
+
+							<label class="btn btn-danger">
+								<input type="radio" name="options" id="F" value="classF" autocomplete="off">
+								<span class="glyphicon glyphicon-ok"></span>
+							</label>
+						</div>
+						<a id='upload' class="btn btn-sm btn-outline center">
+                    		<i class="fa fa-upload" aria-hidden="true"></i> 上传
+                		</a>
+    				</div>
 				</div>
 			</div>
 		</header>
@@ -101,14 +143,71 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
-						<h2>努力建设中...</h2>
+						<h3>图片数据库</h3>
 						<hr class="star-primary">
-						<div id="captures" style="height:200px">
-
-    					</div>
-    					<a id="acapture" href="" download="" style="display : none"></a>
 					</div>
 				</div>
+				<div class="row">
+					<div id="image-class-for-search" class="btn-group col-sm-6" data-toggle="buttons">
+						<label class="btn btn-success active">
+							<input type="radio" name="options" value="classA" autocomplete="off" checked>
+							<span class="glyphicon glyphicon-ok"></span>
+						</label>
+
+						<label class="btn btn-primary">
+							<input type="radio" name="options" value="classB" autocomplete="off">
+							<span class="glyphicon glyphicon-ok"></span>
+						</label>
+
+						<label class="btn btn-info">
+							<input type="radio" name="options" value="classC" autocomplete="off">
+							<span class="glyphicon glyphicon-ok"></span>
+						</label>
+
+						<label class="btn btn-default">
+							<input type="radio" name="options" value="classD" autocomplete="off">
+							<span class="glyphicon glyphicon-ok"></span>
+						</label>
+
+						<label class="btn btn-warning">
+							<input type="radio" name="options" value="classE" autocomplete="off">
+							<span class="glyphicon glyphicon-ok"></span>
+						</label>
+
+						<label class="btn btn-danger">
+							<input type="radio" name="options" value="classF" autocomplete="off">
+							<span class="glyphicon glyphicon-ok"></span>
+						</label>
+					</div>
+					<div class="col-sm-6">
+						<a id='search' class="btn btn-sm btn-search">
+		                    <i class="fa fa-search" aria-hidden="true"></i> 查询
+						</a>
+					</div>
+				</div>
+				<div id="search-result" class="raw">
+					<!--div class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img src="./upload/2017-03-01-18-23-02.jpg">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img src="./upload/2017-03-01-18-23-02.jpg">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img src="./upload/2017-03-01-18-23-02.jpg">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img src="./upload/2017-03-01-18-23-02.jpg">
+						</div>
+					</div-->
+				</div>
+
 			</div>
 		</section>
 
@@ -117,7 +216,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
-						<h2>关于</h2>
+						<h3>关于</h3>
 					</div>
 				</div>
 				<div class="row">
@@ -134,7 +233,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
-						<h2>联系我们</h2>
+						<h3>联系我们</h3>
 						<hr class="star-primary">
 					</div>
 				</div>
