@@ -176,9 +176,9 @@ app.post('/search',upload.single(),function(req,res){
       console.log(results);
       var length = results.length;
       console.log('The number of results is: ',length);
+      res.send(results);
     }
   });
-  res.send('search test');
 });
 
 // HTTP server

@@ -8,7 +8,8 @@
 	var imageUpload = null;
 	var imageId = null;
 	var imageClass = null;
-	var imageEle = "<div id=\"captures\"><img class=\"frame-image\" src=\"##src\" /><div class=\"frame-title\"><a href=\"##href\" download=\"##title\">##title</a></div></div>";
+	var imageEle = "<div id=\"captures\" class=\"thumbnail\" style=\"border-radius:10px;padding:0px;margin-bottom:10px\"><img class=\"frame-image\" src=\"##src\" style=\"margin:10px auto 10px\"><div class=\"frame-title\"><a href=\"##href\" download=\"##title\">##title</a></div></div>";
+	var imageRes ="<div class=\"col-sm-6 col-md-3\"><div class=\"thumbnail\"><img src=\"##id\"><div class=\"frame-title\"><a href=\"##href\" download=\"##title\">##title</a></div></div></div>";
 
 	$("#pause").hide();
 
@@ -109,56 +110,72 @@
 	});
 
 	$('#upload').click(function(){
+		if (imageUpload != null){
 			imageClass=$('#image-class input:radio:checked').val();
-			console.log('The image class is: ',$('#image-class input:radio:checked').val());
-		if (image != null){
-			
-			var formdata = new FormData();
-			formdata.append('id',imageId);
-			formdata.append('image',imageUpload);
-			formdata.append('class',imageClass);
-			$.ajax({
-				url:"http://"+window.location.host.split(":")[0] + ":8080/upload",
-				type:"POST",
-				data:formdata,
-				mimeType:"image/jpeg",
-				processData:false,
-				contentType:false,
-				cache:false,
-				crossDomain:true,
-				success:function(result){
-					console.log(result);
-				},
-				error:function(error){
-					console.log("Something went wrong!");
-				}
-			});
+			console.log('The image class is: ',imageClass);
+			if(imageClass!= undefined){
+				var formdata = new FormData();
+				formdata.append('id',imageId);
+				formdata.append('image',imageUpload);
+				formdata.append('class',imageClass);
+				$.ajax({
+					url:"http://"+window.location.host.split(":")[0] + ":8080/upload",
+					type:"POST",
+					data:formdata,
+					mimeType:"image/jpeg",
+					processData:false,
+					contentType:false,
+					cache:false,
+					crossDomain:true,
+					success:function(result){
+						console.log(result);
+					},
+					error:function(error){
+						console.log("Something went wrong!");
+					}
+				});
+			}
+			else{
+				console.log('Please class the image first!');
+			}
 		}
 		else{
-			console.log("Please open camera first!");
+			console.log("You have not opened Camera or taken a photo!");
 		}
 	});	
 
 	$('#search').click(function(){
 		var searchClass=$('#image-class-for-search input:radio:checked').val();
 		console.log("Waiting for search:",searchClass);
-		var formdata = new FormData();
-		formdata.append('class',searchClass);
-		$.ajax({
-			url:"http://"+window.location.host.split(":")[0] + ":8080/search",
-			type:"POST",
-			data:formdata,
-			processData:false,
-			contentType:false,
-			cache:false,
-			crossDomain:true,
-			success:function(result){
-				console.log(result);
-			},
-			error:function(error){
-				console.log("Bad search!");
-			}
-		});
+		if(searchClass!= undefined){
+			var formdata = new FormData();
+			formdata.append('class',searchClass);
+			$.ajax({
+				url:"http://"+window.location.host.split(":")[0] + ":8080/search",
+				type:"POST",
+				data:formdata,
+				processData:false,
+				contentType:false,
+				cache:false,
+				crossDomain:true,
+				success:function(result){
+					$('#search-result').empty();
+					console.log('The number of search result is: ',result.length);
+					for(var i=0;i<result.length;i++){
+						//console.log(result[i].image_id);
+						var id = "./upload/"+result[i].image_id+".jpg";
+						var searchImage = imageRes.replace("##id", id).replace("##href",id).replace(/##title/g, "" + result[i].image_id + ".jpg");
+						$("#search-result").prepend(searchImage);
+					}
+					console.log('Search done!');
+				},
+				error:function(error){
+					console.log("Bad search!");
+				}
+			});
+		}
+		else{
+			console.log('Please choose the search condition first!')
+		}
 	});
-
 })(jQuery);
