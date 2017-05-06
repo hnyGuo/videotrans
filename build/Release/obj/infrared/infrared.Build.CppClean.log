@@ -1,12 +1,10 @@
-d:\videotrans\build\release\obj\infrared\win_delay_load_hook.obj
 d:\videotrans\build\release\obj\infrared\infrared.obj
+d:\videotrans\build\release\obj\infrared\videodisplay.obj
+d:\videotrans\build\release\obj\infrared\win_delay_load_hook.obj
 d:\videotrans\build\release\obj\infrared\vc140.pdb
 d:\videotrans\build\release\infrared.lib
 d:\videotrans\build\release\infrared.exp
-d:\videotrans\build\release\infrared.node
 d:\videotrans\build\release\infrared.pdb
-d:\videotrans\build\release\infrared.map
-d:\videotrans\build\release\\infrared.node
 d:\videotrans\build\release\obj\infrared\infrared.tlog\cl.command.1.tlog
 d:\videotrans\build\release\obj\infrared\infrared.tlog\cl.read.1.tlog
 d:\videotrans\build\release\obj\infrared\infrared.tlog\cl.write.1.tlog

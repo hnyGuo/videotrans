@@ -6,6 +6,8 @@ D:\opencv\build\include\opencv2/core/utility.hpp : warning C4819: 该文件包�
 D:\opencv\build\include\opencv2/core/utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\opencv\build\include\opencv2/imgproc.hpp(592): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 ..\src\camera.cpp(68): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+..\src\camera.cpp(135): warning C4996: '_sleep': This function or variable has been superceded by newer library or operating system functionality. Consider using Sleep instead. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdlib.h(1266): note: 参见“_sleep”的声明
     正在创建库 D:\videotrans\build\Release\camera.lib 和对象 D:\videotrans\build\Release\camera.exp
   正在生成代码
   已完成代码的生成

@@ -131,8 +131,9 @@ void CameraOpen(uv_work_t* req) {                  //运行在子线程中，读
         
         async.data  = msg;
         uv_async_send(&async);
-         cv::waitKey(30);
-    }
+         //cv::waitKey(30);
+		_sleep(30);
+	}
     rsz.release();
     tmp.release();
     

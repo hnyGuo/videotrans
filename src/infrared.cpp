@@ -1,4 +1,4 @@
-#ifndef UNICODE
+ï»¿#ifndef UNICODE
 #define UNICODE
 #endif
 
@@ -15,7 +15,9 @@
 #include <vector>
 #include <mutex>
 #include "VideoDisplay.h"
-
+#include <time.h>
+#include <math.h>
+#include <iomanip>
 // IR Imager device interfaces
 #include "IRDeviceDS.h"
 
@@ -64,11 +66,13 @@ struct TMessage {
 
 struct AsyncMessage {
 	vector<unsigned char> image;
+	float meanTemperature;
 };
 
 TMessage *message;
 unsigned char* thermalImage;
-
+float meanTemp;
+int u1 = 50, v1 = 40, u2 = 110, v2 = 80;
 mutex mtx;
 // Function called be DirectShow interface when a new frame has been acquired.
 // Multiple cameras are distinguished by the variable id.
@@ -98,6 +102,7 @@ void onThermalFrame(unsigned short* image, unsigned int w, unsigned int h, evo::
 	if (_thermalImages[*instance] == NULL)
 		_thermalImages[*instance] = new unsigned char[iBuilder.getStride() * h * 3];
 	thermalImage = _thermalImages[*instance];
+	meanTemp = iBuilder.getMeanTemperature(u1, v1, u2, v2);
 	iBuilder.convertTemperatureToPaletteImage(thermalImage);
 
 	//_displays[*instance]->drawCapture(0, 0, iBuilder.getStride(), h, 24, thermalImage);
@@ -118,38 +123,54 @@ void updateAsync(uv_async_t*req, int status) {
 	Local<Function> callBack = Local<Function>::New(isolate, message->callBack);
 	
 	Local<Array> arr = Array::New(isolate, asyncMessage->image.size());
+	Local<Object> temperature = Object::New(isolate);
+	temperature->Set(String::NewFromUtf8(isolate, "temperature"), Number::New(isolate, asyncMessage->meanTemperature));
 	int pos = 0;
 	for (unsigned char c : asyncMessage->image) {
 		arr->Set(pos++, Integer::New(isolate, c));
 	}
 	Local<Value> argv[] = {
-		arr
+		arr,
+		temperature
 	};
-	callBack->Call(isolate->GetCurrentContext()->Global(), 1, argv);
+	callBack->Call(isolate->GetCurrentContext()->Global(), 2, argv);
 	asyncMessage->image.clear();
 	delete asyncMessage;
 }
 
 void infraredOpen(uv_work_t* req) {
+	clock_t start, end;
+
 	while (m_brk > 0) {
 		AsyncMessage *msg = new AsyncMessage();
 		if (thermalImage != NULL) {
 			if (mtx.try_lock()) {
+				start = clock();
 				cv::Mat mat(120, 160, CV_8UC3, thermalImage);
 				//_displays[0]->drawCapture(0, 0, 160, 120, 24, thermalImage);
-				cv::imshow("preview", mat);
+				//cv::imshow("preview", mat);
+				stringstream str;
+				//str << (int)(meanTemp*100)/100.0 ;
+				msg->meanTemperature = meanTemp;
+				str << setiosflags(ios::fixed) << setprecision(2) << meanTemp;
+				//printf("%s\n",str.str());
+				cv::rectangle(mat, cvPoint(u1, v1), cvPoint(u2, v2), cvScalar(255, 255, 255), 1, 8, 0);
+				cv::putText(mat, str.str(), cvPoint(u2, v1), CV_FONT_HERSHEY_SIMPLEX, 0.5, cvScalar(0, 255, 0), 1, 8);
 				std::vector<int> compression_parameters = std::vector<int>(2);
 				compression_parameters[0] = CV_IMWRITE_JPEG_QUALITY;
-				compression_parameters[1] = 85; //85     Ñ¹Ëõ±ÈÀý
+				compression_parameters[1] = 85; //85     åŽ‹ç¼©æ¯”ä¾‹
 				vector<unsigned char> image;
 				cv::imencode(".jpg", mat, msg->image, compression_parameters);
-				async.data = msg;
+		 		async.data = msg;
 				uv_async_send(&async);
 				//printf("size:%d\n", msg->image.size());
 			}
 			mtx.unlock();
-			cv::waitKey(30);
 		}
+		_sleep(30);
+		end = clock();
+		double duration = end - start;
+		//printf("Use timeï¼š%f\n", duration / CLOCKS_PER_SEC);
 	}
 }
 
@@ -246,8 +267,8 @@ void Open(const FunctionCallbackInfo<Value>& args) {
 			//if (i<(devices.size() - 1))
 			//_displays[i]->showDetach();
 			//else
-			cv::waitKey(10);
 
+			_sleep(10);
 			uv_work_t* req = new uv_work_t();
 			req->data = message;
 			async = uv_async_t();

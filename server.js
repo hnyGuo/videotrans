@@ -16,6 +16,7 @@ var express = require('express')
   , width = 320
   , height = 240
   , inputIndex = 1    //Camera Index
+  , threshold = 34
   ;
 
 var wss = new WebSocketServer({
@@ -62,7 +63,7 @@ var frameCallback = function (image){
 	}
 };
 
-var frameCallback1 = function(image){
+var frameCallback1 = function(image,temp){
   var frame = {
     type: "frame",
     frame: new Buffer(image,"ascii").toString("base64")
@@ -70,6 +71,14 @@ var frameCallback1 = function(image){
   var raw = JSON.stringify(frame);
   for (var index in clients1){
     clients1[index].send(raw);
+  }
+  if ( temp.temperature > threshold){
+    for(var index in clients1){
+      clients1[index].send(JSON.stringify({
+                    type: "warning",
+                    temperature: temp.temperature,
+                }));  
+    }
   }
 };
 

@@ -16,6 +16,7 @@
 	var imageRes ="<div class=\"col-sm-6 col-md-3\"><div class=\"thumbnail\"><img src=\"##id\"><div class=\"frame-title\"><a href=\"##href\" download=\"##title\">##title</a></div></div></div>";
 
 	$("#pause").hide();
+	$("audio").hide();
 
 	// show loading notice
 	context.fillStyle = '#333';
@@ -83,13 +84,19 @@
 
         ws1.onmessage = function(message){
         	var data = JSON.parse(message.data);
+        	var audio=document.getElementById("audio");
         	switch(data.type){
         	case "size":
+        	audio.pause();
         		break;
         	case "frame":
+        	//audio.pause();
         		image1 = "data:image/jpg;base64," + data.frame;
         		drawFrame1(image1);
         		break;
+        	case "warning":
+        		//console.log(data.temperature);
+        		audio.play();
         	}
         };
 
