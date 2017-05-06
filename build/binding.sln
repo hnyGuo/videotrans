@@ -2,6 +2,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "camera", "camera.vcxproj", "{5C6EDC50-0D0B-F6F8-9BEE-9A1CEF7CC89D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "infrared", "infrared.vcxproj", "{7B9C8560-58D8-F7EE-9BDB-6C1187FB865D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wifi", "wifi.vcxproj", "{5ED6EBAB-79E8-EBD2-DA78-C6D910ACB2E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -12,6 +16,14 @@ Global
 		{5C6EDC50-0D0B-F6F8-9BEE-9A1CEF7CC89D}.Debug|x64.Build.0 = Debug|x64
 		{5C6EDC50-0D0B-F6F8-9BEE-9A1CEF7CC89D}.Release|x64.ActiveCfg = Release|x64
 		{5C6EDC50-0D0B-F6F8-9BEE-9A1CEF7CC89D}.Release|x64.Build.0 = Release|x64
+		{5ED6EBAB-79E8-EBD2-DA78-C6D910ACB2E2}.Debug|x64.ActiveCfg = Debug|x64
+		{5ED6EBAB-79E8-EBD2-DA78-C6D910ACB2E2}.Debug|x64.Build.0 = Debug|x64
+		{5ED6EBAB-79E8-EBD2-DA78-C6D910ACB2E2}.Release|x64.ActiveCfg = Release|x64
+		{5ED6EBAB-79E8-EBD2-DA78-C6D910ACB2E2}.Release|x64.Build.0 = Release|x64
+		{7B9C8560-58D8-F7EE-9BDB-6C1187FB865D}.Debug|x64.ActiveCfg = Debug|x64
+		{7B9C8560-58D8-F7EE-9BDB-6C1187FB865D}.Debug|x64.Build.0 = Debug|x64
+		{7B9C8560-58D8-F7EE-9BDB-6C1187FB865D}.Release|x64.ActiveCfg = Release|x64
+		{7B9C8560-58D8-F7EE-9BDB-6C1187FB865D}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,22 +4,30 @@ var express = require('express')
   , morgan = require('morgan')
   , WebSocketServer = require('ws').Server
   , cam = require('./build/Release/camera')
+  , infra = require('./build/Release/infrared')
+  , wifi = require('./build/Release/wifi')
   , fs = require('fs')
   , multer = require('multer')
   , query = require('./query.js')
   , websocketPort = 8088
+  , websocketPort1 = 8089
   , webPort = 8080
   , openBrowser = false
   , width = 320
   , height = 240
-  , inputString = "0"
+  , inputIndex = 1    //Camera Index
   ;
 
 var wss = new WebSocketServer({
     port: websocketPort
 });
 
+var wss1=new WebSocketServer({
+  port: websocketPort1
+})
+
 var clients = {};
+var clients1 ={};
 
 var createFolder = function(folder){
   try{
@@ -54,6 +62,17 @@ var frameCallback = function (image){
 	}
 };
 
+var frameCallback1 = function(image){
+  var frame = {
+    type: "frame",
+    frame: new Buffer(image,"ascii").toString("base64")
+  };
+  var raw = JSON.stringify(frame);
+  for (var index in clients1){
+    clients1[index].send(raw);
+  }
+};
+
 var disconnectClient = function (index) {
 	if (Object.keys(clients).length > 0){
     delete clients[index];
@@ -64,6 +83,15 @@ var disconnectClient = function (index) {
 	}
 };
 
+var disconnectClient1 = function(index){
+  if (Object.keys(clients1).length > 0){
+    delete clients1[index];
+  }
+  if(Object.keys(clients1).length == 0){
+    console.log("No Clients, Closing Infrared Camera");
+    infra.Close();
+  }
+}
 var connectClient = function (ws){
 	var index = ""+ new Date().getTime();
 	console.log(cam.IsOpen());
@@ -74,12 +102,23 @@ var connectClient = function (ws){
 			height:height,
 			window:false,
 			codec:".jpg",
-			input:inputString
+			input:inputIndex
 		});
 	}
 	clients[index] = ws;
 	return index;
 };
+
+var connectClient1 = function(ws){
+  var index = ""+ new Date().getTime();
+  console.log(infra.IsOpen());
+  if(!infra.IsOpen()){
+    console.log("New Clients, Opening Infrared Camra");
+    infra.Open(frameCallback1);
+  }
+  clients1[index] = ws;
+  return index;
+}
 
 wss.on('connection', function (ws) {
     var disconnected = false;
@@ -87,6 +126,7 @@ wss.on('connection', function (ws) {
 
     ws.on('close', function () {
         disconnectClient(index);
+        console.log('Page Close...');
     });
 
     ws.on('open', function () {
@@ -99,11 +139,48 @@ wss.on('connection', function (ws) {
         case "close":
             {
                 disconnectClient(index);
+                console.log('Button Close...')
             }
             break;
         case "size":
             {
                 var size = cam.GetPreviewSize();
+                ws.send(JSON.stringify({
+                    type: "size",
+                    width: size.width,
+                    height: size.height
+                }));
+            }
+            break;
+        }
+    });
+});
+
+wss1.on('connection', function (ws) {
+    var disconnected = false;
+    var index = connectClient1(ws);
+
+    ws.on('close', function () {
+        disconnectClient1(index);
+        console.log('Page Close...');
+    });
+
+    ws.on('open', function () {
+        console.log("Opened");
+    });
+
+    ws.on('message', function (message) {
+
+        switch (message) {
+        case "close":
+            {
+                disconnectClient1(index);
+                console.log('Button Close...');
+            }
+            break;
+        case "size":
+            {
+                var size = infra.GetPreviewSize();
                 ws.send(JSON.stringify({
                     type: "size",
                     width: size.width,
@@ -180,6 +257,12 @@ app.post('/search',upload.single(),function(req,res){
     }
   });
 });
+
+app.get('/wifi',function(req,res){
+  var wifiList = wifi.wifiScan();
+  console.log(wifiList);
+  res.send(wifiList);
+})
 
 // HTTP server
 var server = http.createServer(app);

@@ -46,7 +46,7 @@
     <TargetPath>$(OutDir)\$(ProjectName).node</TargetPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\opencv\build\include;D:\opencv\build\include\opencv;$(IncludePath)</IncludePath>
+    <IncludePath>D:\opencv\build\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\opencv\build\x64\vc14\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -1,3 +1,7 @@
+#ifndef UNICODE
+#define UNICODE
+#endif
+
 #include <node.h>
 #include <v8.h>
 #include <opencv2/core/core.hpp>
@@ -62,6 +66,7 @@ void updateAsync(uv_async_t* req, int status) {           //运行在uv_default_
     }
     
     Local<Array> arr = Array::New(isolate,asyncMessage->image.size());
+	//printf("size:%d\n", asyncMessage->image.size());
     int pos = 0;
     for(unsigned char c : asyncMessage->image) {
         arr->Set(pos++,Integer::New(isolate,c));
@@ -109,7 +114,7 @@ void CameraOpen(uv_work_t* req) {                  //运行在子线程中，读
 
         std::vector<int> compression_parameters = std::vector<int>(2);
         compression_parameters[0] = CV_IMWRITE_JPEG_QUALITY;
-        compression_parameters[1] = 40; //85
+        compression_parameters[1] = 85; //85     压缩比例
         
         //Encode to jpg
         if(message->resize) {
@@ -122,12 +127,11 @@ void CameraOpen(uv_work_t* req) {                  //运行在子线程中，读
         
         if(message->window && tmp.size().height > 0 && tmp.size().width > 0 ) {
             cv::imshow("Preview", msg->frame);
-            cv::waitKey(20);
         }
         
         async.data  = msg;
         uv_async_send(&async);
-        
+         cv::waitKey(30);
     }
     rsz.release();
     tmp.release();
@@ -196,7 +200,7 @@ void Open(const FunctionCallbackInfo<Value>& args) {
             message->codec = stringValue(val);
         }
         if(params->Has(String::NewFromUtf8(isolate,"input"))) {
-            Local<Value> input = params->Get(String::NewFromUtf8(isolate,"input"));
+            input = params->Get(String::NewFromUtf8(isolate,"input")); //获取nodejs传出的摄像头index
             if(!input->IsNumber()) {
                 inputString = stringValue(input);
             }
@@ -262,4 +266,4 @@ std::string stringValue(Local<Value> value) {
     }
 }
 
-NODE_MODULE(camera, init);
+NODE_MODULE(camera, init)

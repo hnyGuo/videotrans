@@ -43,3 +43,15 @@ create table images(id int auto_increment,image_id varchar(30) not null,image_cl
 		<a href=\"##href\" download=\"##title\">##title</a>
 	</div>
 </div>
+
+2017-4-24
+npm install -g node-gyp
+npm config set python python2.7
+node-gyp configure
+执行这三步之后，本地才会有node.lib等一些编译所必须的文件。
+
+2017-4-25
+打开多个客户端的视频播放按钮后再刷新网页，会导致后台报错，待解决。
+
+2017-5-4
+对于热像仪，需要将SDK中的libirimager.dll拷贝到build/Release下面，否则打不开infrared.node

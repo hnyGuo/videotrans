@@ -49,6 +49,50 @@
                     'cflags_cc!': ['-fno-rtti', '-fno-exceptions']
                 }]
             ]
-    }
+        },
+        {
+            "target_name": "wifi",
+            "sources": ["src/wifi.cpp"],
+            "link_settings": {
+                "libraries": ["wlanapi.lib","ole32.lib"]
+            },
+            "cflags": [
+                "-g", "-std=c++11", "-Wall"
+            ],
+            "conditions": [
+                ['OS=="win32"', {
+                    'include_dirs': [
+                        'C:/Program Files (x86)/Windows Kits/8.1/Include/um'
+                        ],
+                    'link_settings': {
+                        'library_dirs': ['C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64']
+                    },
+                    'cflags!': ['-fno-exceptions'],
+                    'cflags_cc!': ['-fno-rtti', '-fno-exceptions']
+                }]
+            ]
+        },
+        {
+            "target_name": "infrared",
+            "sources": ["src/infrared.cpp"],
+            "link_settings": {
+                "libraries": ["libirimager.lib","opencv_world320.lib"]
+            },
+            "cflags": [
+                "-g", "-std=c++11", "-Wall"
+            ],
+            "conditions": [
+                ['OS=="win32"', {
+                    'include_dirs': [
+                        'sdk'
+                        ],
+                    'link_settings': {
+                        'library_dirs': ['sdk/x64']
+                    },
+                    'cflags!': ['-fno-exceptions'],
+                    'cflags_cc!': ['-fno-rtti', '-fno-exceptions']
+                }]
+            ]
+        }
     ]
 }

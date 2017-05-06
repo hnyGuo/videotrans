@@ -6,6 +6,9 @@
       "express": "4.10.1"
     , "morgan": "1.4.1"
     , "ws": "*"
+    , "fs": "*"
+    , "multer": "*"
+    ,"mysql": "*"
   },
   	"scripts":{
   		"start": "node server.js"

@@ -2,9 +2,13 @@
 	"use strict";
 
 	var ws = null;
+	var ws1 = null;
 	var canvas = $('#rgb-video')[0];
+	var canvas1 = $('#inf-video')[0];
 	var context = canvas.getContext('2d');
+	var context1 = canvas1.getContext('2d');
 	var image = null;
+	var image1 = null;
 	var imageUpload = null;
 	var imageId = null;
 	var imageClass = null;
@@ -25,14 +29,23 @@
 		img.src = image;
 	}
 
+	function drawFrame1(image){
+		var img = new Image();
+		img.onload = function(){
+			context1.drawImage(this,0,0,canvas1.width,canvas1.height);
+		}
+		img.src = image;
+	}
 	function closeCamera(){
 		$("#play").show();
 		$("#pause").hide();
 		ws.send("close");
+		ws1.send("close");
 	};
 
 	function openCamera(){
-		ws = new WebSocket("ws://" + window.location.host.split(":")[0] + ":8088")
+		ws = new WebSocket("ws://" + window.location.host.split(":")[0] + ":8088");
+		ws1 = new WebSocket("ws://" + window.location.host.split(":")[0] + ":8089");
 		var sizeReceived = false;
         ws.onopen = function () {
             ws.send("open");
@@ -59,6 +72,27 @@
 
             }
         };
+
+        ws1.onopen = function () {
+            ws1.send("open");
+        };
+
+        ws1.onerror = function (e) {
+            console.log(e);
+        };
+
+        ws1.onmessage = function(message){
+        	var data = JSON.parse(message.data);
+        	switch(data.type){
+        	case "size":
+        		break;
+        	case "frame":
+        		image1 = "data:image/jpg;base64," + data.frame;
+        		drawFrame1(image1);
+        		break;
+        	}
+        };
+
         $("#play").hide();
         $("#pause").show();
 	};
@@ -78,12 +112,12 @@
     if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
     return fmt;
 	}
-
+	
 	function capture() {
         var id = "" + new Date().Format("yyyy-MM-dd-hh-mm-ss");
         var capImage = imageEle.replace("##src", image).replace("##href", image).replace(/##title/g, "" + id + ".jpg");
         $("#captures").replaceWith(capImage);
-        $("#captures").height($("#rgb-video").height());
+     	$("#captures").height($("#rgb-video").height());   
         $(".frame-image").height($("#captures").height()-20);
         $(".frame-image").width($("#captures").width()-34);
         imageUpload = image;
@@ -101,9 +135,6 @@
 	});
 
 	$('#save-image').click(function(){
-		/*$.get("http://"+window.location.host.split(":")[0] + ":8080/save-image",function(data,status){
-			//alert("data:"+data+"\nstatus:"+status);
-		});*/
 		if(image != null){
 			capture();
 		}
@@ -178,4 +209,17 @@
 			console.log('Please choose the search condition first!')
 		}
 	});
+
+	$('#wifi').click(function(){
+		$.ajax({
+			url:"http://"+window.location.host.split(":")[0]+":8080/wifi",
+			type:"GET",
+			success:function(result){
+				console.log(result);
+			},
+			error:function(error){
+				console.log("No wifi signal!");
+			}
+		})
+	})
 })(jQuery);
