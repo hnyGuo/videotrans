@@ -231,7 +231,7 @@ void Open(const FunctionCallbackInfo<Value>& args) {
     uv_async_init(loop,&async,(uv_async_cb)updateAsync);
     uv_queue_work(loop, req, CameraOpen,(uv_after_work_cb) CameraClose);
     
-    args.GetReturnValue().Set(String::NewFromUtf8(isolate,"ok"));
+    args.GetReturnValue().Set(String::NewFromUtf8(isolate,"rgb camera is opened"));
 }
 
 void Close(const FunctionCallbackInfo<Value>& args) {

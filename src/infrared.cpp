@@ -140,7 +140,6 @@ void updateAsync(uv_async_t*req, int status) {
 
 void infraredOpen(uv_work_t* req) {
 	clock_t start, end;
-
 	while (m_brk > 0) {
 		AsyncMessage *msg = new AsyncMessage();
 		if (thermalImage != NULL) {
@@ -248,7 +247,7 @@ void Open(const FunctionCallbackInfo<Value>& args) {
 			std::cout << (*optics)[i] << " deg ";
 		std::cout << std::endl;
 		message->vc->run();
-
+		
 		evo::IRDeviceDS* device = message->devices[0];
 		_imagers[0] = new evo::IRImager();
 		_frc[0] = new evo::FramerateCounter(1000.0, device->getFrequency());
@@ -267,8 +266,7 @@ void Open(const FunctionCallbackInfo<Value>& args) {
 			//if (i<(devices.size() - 1))
 			//_displays[i]->showDetach();
 			//else
-
-			_sleep(10);
+			_sleep(100);
 			uv_work_t* req = new uv_work_t();
 			req->data = message;
 			async = uv_async_t();
@@ -281,7 +279,7 @@ void Open(const FunctionCallbackInfo<Value>& args) {
 	{
 		std::cout << "IR Imager device(s) could not be found" << std::endl;
 	}
-	args.GetReturnValue().Set(String::NewFromUtf8(isolate, "ok"));
+	args.GetReturnValue().Set(String::NewFromUtf8(isolate, "infrared camera is opened"));
 }
 
 void Close(const FunctionCallbackInfo<Value>& args) {

@@ -59,7 +59,9 @@ var frameCallback = function (image){
 	};
 	var raw = JSON.stringify(frame);
 	for (var index in clients){
-		clients[index].send(raw);
+		clients[index].send(raw,function(err){
+      //console.log("err:",err);
+    });
 	}
 };
 
@@ -70,14 +72,18 @@ var frameCallback1 = function(image,temp){
   };
   var raw = JSON.stringify(frame);
   for (var index in clients1){
-    clients1[index].send(raw);
+    clients1[index].send(raw,function(err){
+      //console.log("err:",err);
+    });
   }
   if ( temp.temperature > threshold){
     for(var index in clients1){
       clients1[index].send(JSON.stringify({
                     type: "warning",
                     temperature: temp.temperature,
-                }));  
+                }),function(err){
+        //console.log("err:",err);
+      });  
     }
   }
 };
@@ -106,13 +112,13 @@ var connectClient = function (ws){
 	console.log(cam.IsOpen());
 	if(!cam.IsOpen()){
 		console.log("New Clients, Opening Camera");
-		cam.Open(frameCallback,{
+		console.log(cam.Open(frameCallback,{
 			width:width,
 			height:height,
 			window:false,
 			codec:".jpg",
 			input:inputIndex
-		});
+		}));
 	}
 	clients[index] = ws;
 	return index;
@@ -123,7 +129,7 @@ var connectClient1 = function(ws){
   console.log(infra.IsOpen());
   if(!infra.IsOpen()){
     console.log("New Clients, Opening Infrared Camra");
-    infra.Open(frameCallback1);
+    console.log(infra.Open(frameCallback1));
   }
   clients1[index] = ws;
   return index;
@@ -133,9 +139,9 @@ wss.on('connection', function (ws) {
     var disconnected = false;
     var index = connectClient(ws);
 
-    ws.on('close', function () {
+    ws.on('close', function (err) {
         disconnectClient(index);
-        console.log('Page Close...');
+        console.log("WebPage Close:",err);
     });
 
     ws.on('open', function () {
@@ -169,9 +175,9 @@ wss1.on('connection', function (ws) {
     var disconnected = false;
     var index = connectClient1(ws);
 
-    ws.on('close', function () {
+    ws.on('close', function (err) {
         disconnectClient1(index);
-        console.log('Page Close...');
+        console.log("WebPage Close:",err);
     });
 
     ws.on('open', function () {

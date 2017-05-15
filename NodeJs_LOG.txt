@@ -55,3 +55,4 @@ node-gyp configure
 
 2017-5-4
 对于热像仪，需要将SDK中的libirimager.dll拷贝到build/Release下面，否则打不开infrared.node
+由于infrared.node需要调用irDirectSDK里面的配置文件，所以在其他电脑部署项目工程的时候需要把irDirectSDK拷贝到D盘根目录。
