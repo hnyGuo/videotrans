@@ -15,8 +15,8 @@ var express = require('express')
   , openBrowser = false
   , width = 320
   , height = 240
-  , inputIndex = 1    //Camera Index
-  , threshold = 34
+  , inputIndex = 2    //Camera Index
+  , threshold = 15
   ;
 
 var wss = new WebSocketServer({
@@ -226,14 +226,18 @@ app.get('/',function(req,res){
 });*/
 
 app.post('/upload',upload.single(),function(req,res){
-  var imageId = req.body.id;
+  var rgbImageId = req.body.rgbId;
+  var infraImageId = req.body.infraId;
   var imageClass = req.body.class;
-  var imgData = req.body.image;
-  var base64Data = imgData.replace(/^data:image\/\w+;base64,/,"");
-  var dataBuffer = new Buffer(base64Data,'base64');
-
+  var rgbImageData = req.body.rgbImage;
+  var infraImageData = req.body.infraImage;
+  var rgbBase64Data = rgbImageData.replace(/^data:image\/\w+;base64,/,"");
+  var infraBase64Data = infraImageData.replace(/^data:image\/\w+;base64,/,"");
+  var rgbDataBuffer = new Buffer(rgbBase64Data,'base64');
+  var infraDataBuffer = new Buffer(infraBase64Data,'base64');
   var post = {
-    image_id : imageId,
+    rgb_image_id : rgbImageId,
+    infra_image_id : infraImageId,
     image_class : imageClass 
   };
 
@@ -243,11 +247,19 @@ app.post('/upload',upload.single(),function(req,res){
       res.send(err);
     }else{
       console.log('insert success');
-      fs.writeFile("./public/upload/"+req.body.id+".jpg",dataBuffer,function(err){
+      fs.writeFile("./public/upload/"+rgbImageId+".jpg",rgbDataBuffer,function(err){
       if(err){
         res.send(err);
       }else{
-        res.send("upload successful!");
+        res.send("上传成功!");
+      }
+      });
+
+      fs.writeFile("./public/upload/"+infraImageId+".jpg",infraDataBuffer,function(err){
+      if(err){
+        //res.send(err);
+      }else{
+        //res.send("upload successful!");
       }
       });
     }
@@ -260,7 +272,7 @@ app.post('/search',upload.single(),function(req,res){
   var post = {
     image_class : searchClass
   };
-  query('SELECT image_id FROM images WHERE ?',post,function(err,results,fields){
+  query('SELECT rgb_image_id, infra_image_id FROM images WHERE ?',post,function(err,results,fields){
     if(err){
       console.log(err.message);
       res.send(err);

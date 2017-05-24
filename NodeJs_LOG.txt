@@ -59,3 +59,9 @@ node-gyp configure
 
 2017-5-15
 修复了服务器崩溃的Bug.
+
+2017-5-23
+通过jQuery的resize()方法监听窗口尺寸的变化实现了图像采集窗口高度自适应跟随视频窗口高度。
+
+数据库更新，新增红外图像Id:
+create table images(id int auto_increment,rgb_image_id varchar(30) not null,infra_image_id varchar(30) not null,image_class varchar(20) not null,submission_date timestamp,primary key(id),unique key(rgb_image_id));

@@ -71,7 +71,8 @@ struct AsyncMessage {
 
 TMessage *message;
 unsigned char* thermalImage;
-float meanTemp;
+float meanTemp,diffTemp;
+evo::ExtremalRegion minRegion, maxRegion;
 int u1 = 50, v1 = 40, u2 = 110, v2 = 80;
 mutex mtx;
 // Function called be DirectShow interface when a new frame has been acquired.
@@ -102,7 +103,11 @@ void onThermalFrame(unsigned short* image, unsigned int w, unsigned int h, evo::
 	if (_thermalImages[*instance] == NULL)
 		_thermalImages[*instance] = new unsigned char[iBuilder.getStride() * h * 3];
 	thermalImage = _thermalImages[*instance];
+	
 	meanTemp = iBuilder.getMeanTemperature(u1, v1, u2, v2);
+	
+	iBuilder.getMinMaxRegion(10, &minRegion, &maxRegion);
+	diffTemp = maxRegion.t-minRegion.t;
 	iBuilder.convertTemperatureToPaletteImage(thermalImage);
 
 	//_displays[*instance]->drawCapture(0, 0, iBuilder.getStride(), h, 24, thermalImage);
@@ -148,13 +153,17 @@ void infraredOpen(uv_work_t* req) {
 				cv::Mat mat(120, 160, CV_8UC3, thermalImage);
 				//_displays[0]->drawCapture(0, 0, 160, 120, 24, thermalImage);
 				//cv::imshow("preview", mat);
-				stringstream str;
+				stringstream str,str1;
 				//str << (int)(meanTemp*100)/100.0 ;
-				msg->meanTemperature = meanTemp;
+				msg->meanTemperature = diffTemp; //项目方要求最高温与最低温的差值作为报警信号
 				str << setiosflags(ios::fixed) << setprecision(2) << meanTemp;
+				str1 << setiosflags(ios::fixed) << setprecision(2) << diffTemp;
 				//printf("%s\n",str.str());
 				cv::rectangle(mat, cvPoint(u1, v1), cvPoint(u2, v2), cvScalar(255, 255, 255), 1, 8, 0);
-				cv::putText(mat, str.str(), cvPoint(u2, v1), CV_FONT_HERSHEY_SIMPLEX, 0.5, cvScalar(0, 255, 0), 1, 8);
+				cv::rectangle(mat, cvPoint(maxRegion.u1, maxRegion.v1), cvPoint(maxRegion.u2, maxRegion.v2), cvScalar(0, 0, 255), 1, 8, 0);
+				cv::rectangle(mat, cvPoint(minRegion.u1, minRegion.v1), cvPoint(minRegion.u2, minRegion.v2), cvScalar(0, 255, 0), 1, 8, 0);
+				cv::putText(mat, str.str(), cvPoint(u2, v1), CV_FONT_HERSHEY_SIMPLEX, 0.5, cvScalar(0, 0, 255), 1, 8);
+				cv::putText(mat, str1.str(), cvPoint(u2, v2), CV_FONT_HERSHEY_SIMPLEX, 0.5, cvScalar(0, 255, 0), 1, 8);
 				std::vector<int> compression_parameters = std::vector<int>(2);
 				compression_parameters[0] = CV_IMWRITE_JPEG_QUALITY;
 				compression_parameters[1] = 85; //85     压缩比例

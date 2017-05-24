@@ -3,18 +3,24 @@
 
 	var ws = null;
 	var ws1 = null;
-	var canvas = $('#rgb-video')[0];
-	var canvas1 = $('#inf-video')[0];
+	var canvas = $('#rgb_video')[0];
+	var canvas_large = $('#rgb_video_large')[0];
+	var canvas1 = $('#inf_video')[0];
+	var canvas1_large = $('#inf_video_large')[0];
 	var context = canvas.getContext('2d');
+	var context_large = canvas_large.getContext('2d');
 	var context1 = canvas1.getContext('2d');
+	var context1_large = canvas1_large.getContext('2d');
 	var image = null;
 	var image1 = null;
 	var imageUpload = null;
-	var imageId = null;
+	var imageUpload1=null;
+	var rgbImageId = null;
+	var infraImageId = null;
 	var imageClass = null;
-	var imageEle = "<div id=\"captures\" class=\"thumbnail\" style=\"border-radius:10px;padding:0px;margin-bottom:10px\"><img class=\"frame-image\" src=\"##src\" style=\"margin:10px auto 10px\"><div class=\"frame-title\"><a href=\"##href\" download=\"##title\">##title</a></div></div>";
-	var imageRes ="<div class=\"col-sm-6 col-md-3\"><div class=\"thumbnail\"><img src=\"##id\"><div class=\"frame-title\"><a href=\"##href\" download=\"##title\">##title</a></div></div></div>";
-
+	var imageEle = "<div id=\"captures\" class=\"thumbnail\" style=\"border-radius:10px;padding:0px;margin-bottom:5px\"><img class=\"frame-image\" src=\"##src\" style=\"margin:10px auto 0px\"><div class=\"frame-title\"><a href=\"##href\" download=\"##title\">##title</a></div></div>";
+	var imageRes ="<div class=\"col-sm-6 col-md-3\"><div class=\"thumbnail\"><img src=\"##id\" style=\"width:202px;height:151.5px;margin-bottom:1px\"><div class=\"frame-title\"><a href=\"##href\" download=\"##title\">##title</a></div></div></div>";
+	var wifiEle = "<div class=\"row\"><img src=\"##src\" style=\"height:30px;width:30px;margin:10px 30px 10px 10px\" align=\"left\"><p style=\"margin:12px 10px 8px 10px\" align=\"left\">##ssid</p></div>";
 	$("#pause").hide();
 	$("audio").hide();
 
@@ -26,6 +32,7 @@
 		var img = new Image();
 		img.onload = function(){
 			context.drawImage(this, 0, 0, canvas.width, canvas.height);
+			context_large.drawImage(this,0,0,canvas_large.width,canvas_large.height);
 		}
 		img.src = image;
 	}
@@ -34,6 +41,7 @@
 		var img = new Image();
 		img.onload = function(){
 			context1.drawImage(this,0,0,canvas1.width,canvas1.height);
+			context1_large.drawImage(this,0,0,canvas1_large.width,canvas1_large.height);
 		}
 		img.src = image;
 	}
@@ -121,17 +129,20 @@
 	}
 	
 	function capture() {
-        var id = "" + new Date().Format("yyyy-MM-dd-hh-mm-ss");
-        var capImage = imageEle.replace("##src", image).replace("##href", image).replace(/##title/g, "" + id + ".jpg");
+        var rgb_id = "" + new Date().Format("yyyy-MM-dd-hh-mm-ss")+"-1";
+        var infra_id = "" + new Date().Format("yyyy-MM-dd-hh-mm-ss")+"-2";
+        var capImage = imageEle.replace("##src", image).replace("##href", image).replace(/##title/g, "" + rgb_id + ".jpg");
         $("#captures").replaceWith(capImage);
-     	$("#captures").height($("#rgb-video").height());   
-        $(".frame-image").height($("#captures").height()-20);
+     	$("#captures").height(268.5);   
+        $(".frame-image").height($("#captures").height()-30);
         $(".frame-image").width($("#captures").width()-34);
         imageUpload = image;
-        imageId = id;
+        imageUpload1 = image1;
+        rgbImageId = rgb_id;
+        infraImageId = infra_id;
     };
 
-    $("#captures").height($("#rgb-video").height());
+    $("#captures").height($("#rgb_video").height());
 
 	$("#play").click(function(){
 		openCamera();
@@ -153,8 +164,10 @@
 			console.log('The image class is: ',imageClass);
 			if(imageClass!= undefined){
 				var formdata = new FormData();
-				formdata.append('id',imageId);
-				formdata.append('image',imageUpload);
+				formdata.append('rgbId',rgbImageId);
+				formdata.append('infraId',infraImageId);
+				formdata.append('rgbImage',imageUpload);
+				formdata.append('infraImage',imageUpload1);
 				formdata.append('class',imageClass);
 				$.ajax({
 					url:"http://"+window.location.host.split(":")[0] + ":8080/upload",
@@ -167,9 +180,14 @@
 					crossDomain:true,
 					success:function(result){
 						console.log(result);
+						//alert(result);
+						$('#upload-result').empty();
+						$('#upload-result').append(result);
+						$('#myModal4').modal('show');
 					},
 					error:function(error){
 						console.log("Something went wrong!");
+						alert(error);
 					}
 				});
 			}
@@ -183,7 +201,7 @@
 	});	
 
 	$('#search').click(function(){
-		var searchClass=$('#image-class-for-search input:radio:checked').val();
+		var searchClass=$('#image-class input:radio:checked').val();
 		console.log("Waiting for search:",searchClass);
 		if(searchClass!= undefined){
 			var formdata = new FormData();
@@ -199,11 +217,15 @@
 				success:function(result){
 					$('#search-result').empty();
 					console.log('The number of search result is: ',result.length);
+					//console.log(result);
 					for(var i=0;i<result.length;i++){
 						//console.log(result[i].image_id);
-						var id = "./upload/"+result[i].image_id+".jpg";
-						var searchImage = imageRes.replace("##id", id).replace("##href",id).replace(/##title/g, "" + result[i].image_id + ".jpg");
-						$("#search-result").prepend(searchImage);
+						var id = "./upload/"+result[i].rgb_image_id+".jpg";
+						var searchImage = imageRes.replace("##id", id).replace("##href",id).replace(/##title/g, "" + result[i].rgb_image_id + ".jpg");
+						$('#search-result').append(searchImage);
+						id = "./upload/"+result[i].infra_image_id+".jpg";
+						searchImage = imageRes.replace("##id", id).replace("##href",id).replace(/##title/g, "" + result[i].infra_image_id + ".jpg");
+						$('#search-result').append(searchImage);
 					}
 					console.log('Search done!');
 				},
@@ -223,10 +245,35 @@
 			type:"GET",
 			success:function(result){
 				console.log(result);
+				$('#wifi-list').empty();
+				for(var i=0;i<result.length;i++){
+					if(result[i]!=undefined){
+						//console.log(result[i].signalQuality/25);
+						if(result[i].signalQuality/25<1){
+							var wifi = wifiEle.replace("##src","images/wifi1.jpg").replace("##ssid",result[i].ssid);
+						}
+						else if(result[i].signalQuality/25>=1&&result[i].signalQuality/25<2){
+							var wifi = wifiEle.replace("##src","images/wifi2.jpg").replace("##ssid",result[i].ssid);	
+						}
+						else if(result[i].signalQuality/25>=2&&result[i].signalQuality/25<3){
+							var wifi = wifiEle.replace("##src","images/wifi3.jpg").replace("##ssid",result[i].ssid);	
+						}
+						else{
+							var wifi = wifiEle.replace("##src","images/wifi4.jpg").replace("##ssid",result[i].ssid);	
+						}
+						$('#wifi-list').append(wifi);
+					}
+				}
 			},
 			error:function(error){
 				console.log("No wifi signal!");
 			}
 		})
 	})
+
+	$( window ).resize(function() {
+  		$("#captures").height($("#rgb_video").height());
+	});
+
+
 })(jQuery);
