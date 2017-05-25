@@ -1,6 +1,6 @@
  infrared
 
- Timestamp is 5925915d (Wed May 24 21:57:49 2017)
+ Timestamp is 5926372a (Thu May 25 09:45:14 2017)
 
  Preferred load address is 0000000180000000
 
@@ -78,25 +78,25 @@
  0001:000001b0       __local_stdio_printf_options 00000001800011b0 f i infrared.obj
  0001:000001c0       sprintf_s                  00000001800011c0 f i infrared.obj
  0001:00000220       ?what@exception@stdext@@UEBAPEBDXZ 0000000180001220 f i infrared.obj
- 0001:00000240       ?RMAwaken@InternalContextBase@details@Concurrency@@EEAAXXZ 0000000180001240 f i libconcrt:InternalContextBase.obj
- 0001:00000240       ?CreateNodeTopology@ResourceManager@details@Concurrency@@UEAAXIPEAIPEAPEAI0@Z 0000000180001240 f i libconcrt:ResourceManager.obj
- 0001:00000240       ?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ 0000000180001240 f i infrared.obj
- 0001:00000240       __except_validate_context_record 0000000180001240 f i libvcruntime:jbcxrval.obj
- 0001:00000240       ?NotifyResourcesExternallyBusy@ThreadScheduler@details@Concurrency@@UEAAXPEAPEAUIVirtualProcessorRoot@3@I@Z 0000000180001240 f i libconcrt:ThreadScheduler.obj
- 0001:00000240       ??3@YAXPEAX0@Z             0000000180001240 f i libcpmt:mutex.obj
- 0001:00000240       ?Destroy@WaitAnyBlock@details@Concurrency@@UEAAXXZ 0000000180001240 f i libconcrt:event.obj
- 0001:00000240       ?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ 0000000180001240 f i infrared.obj
- 0001:00000240       ?destroy@stl_condition_variable_win7@details@Concurrency@@UEAAXXZ 0000000180001240 f i libcpmt:cond.obj
- 0001:00000240       ?destroy@stl_critical_section_win7@details@Concurrency@@UEAAXXZ 0000000180001240 f i libcpmt:mutex.obj
- 0001:00000240       ?VirtualProcessorActiveNotification@SchedulerBase@details@Concurrency@@MEAAX_NJ@Z 0000000180001240 f i libconcrt:SchedulerBase.obj
- 0001:00000240       ?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z 0000000180001240 f i infrared.obj
- 0001:00000240       ?destroy@stl_condition_variable_vista@details@Concurrency@@UEAAXXZ 0000000180001240 f i libcpmt:cond.obj
- 0001:00000240       ?NotifyResourcesExternallyIdle@ThreadScheduler@details@Concurrency@@UEAAXPEAPEAUIVirtualProcessorRoot@3@I@Z 0000000180001240 f i libconcrt:ThreadScheduler.obj
  0001:00000240       ??1critical_section@Concurrency@@QEAA@XZ 0000000180001240 f i libconcrt:rtlocks.obj
- 0001:00000240       ?onFlageStateChange@@YAXW4EnumFlagState@evo@@PEAX@Z 0000000180001240 f i infrared.obj
+ 0001:00000240       ?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z 0000000180001240 f i infrared.obj
+ 0001:00000240       __except_validate_context_record 0000000180001240 f i libvcruntime:jbcxrval.obj
+ 0001:00000240       _guard_check_icall_nop     0000000180001240 f i LIBCMT:guard_support.obj
  0001:00000240       ?NotifyAffinitizedWork@FairScheduleGroupSegment@details@Concurrency@@UEAAXXZ 0000000180001240 f i libconcrt:SchedulerBase.obj
  0001:00000240       ?_Doraise@exception@stdext@@MEBAXXZ 0000000180001240 f i infrared.obj
- 0001:00000240       _guard_check_icall_nop     0000000180001240 f i LIBCMT:guard_support.obj
+ 0001:00000240       ?NotifyResourcesExternallyIdle@ThreadScheduler@details@Concurrency@@UEAAXPEAPEAUIVirtualProcessorRoot@3@I@Z 0000000180001240 f i libconcrt:ThreadScheduler.obj
+ 0001:00000240       ?NotifyResourcesExternallyBusy@ThreadScheduler@details@Concurrency@@UEAAXPEAPEAUIVirtualProcessorRoot@3@I@Z 0000000180001240 f i libconcrt:ThreadScheduler.obj
+ 0001:00000240       ?RMAwaken@InternalContextBase@details@Concurrency@@EEAAXXZ 0000000180001240 f i libconcrt:InternalContextBase.obj
+ 0001:00000240       ?VirtualProcessorActiveNotification@SchedulerBase@details@Concurrency@@MEAAX_NJ@Z 0000000180001240 f i libconcrt:SchedulerBase.obj
+ 0001:00000240       ?Destroy@WaitAnyBlock@details@Concurrency@@UEAAXXZ 0000000180001240 f i libconcrt:event.obj
+ 0001:00000240       ?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ 0000000180001240 f i infrared.obj
+ 0001:00000240       ?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ 0000000180001240 f i infrared.obj
+ 0001:00000240       ??3@YAXPEAX0@Z             0000000180001240 f i libcpmt:mutex.obj
+ 0001:00000240       ?destroy@stl_condition_variable_win7@details@Concurrency@@UEAAXXZ 0000000180001240 f i libcpmt:cond.obj
+ 0001:00000240       ?CreateNodeTopology@ResourceManager@details@Concurrency@@UEAAXIPEAIPEAPEAI0@Z 0000000180001240 f i libconcrt:ResourceManager.obj
+ 0001:00000240       ?onFlageStateChange@@YAXW4EnumFlagState@evo@@PEAX@Z 0000000180001240 f i infrared.obj
+ 0001:00000240       ?destroy@stl_condition_variable_vista@details@Concurrency@@UEAAXXZ 0000000180001240 f i libcpmt:cond.obj
+ 0001:00000240       ?destroy@stl_critical_section_win7@details@Concurrency@@UEAAXXZ 0000000180001240 f i libcpmt:mutex.obj
  0001:00000250       ??_Eruntime_error@std@@UEAAPEAXI@Z 0000000180001250 f i * CIL library *:* CIL module *
  0001:00000250       ??_Gexception@stdext@@UEAAPEAXI@Z 0000000180001250 f i infrared.obj
  0001:00000250       ??_Gruntime_error@std@@UEAAPEAXI@Z 0000000180001250 f i infrared.obj
@@ -119,22 +119,22 @@
  0001:00000670       ?do_narrow@?$ctype@D@std@@MEBAPEBDPEBD0DPEAD@Z 0000000180001670 f i infrared.obj
  0001:00000690       ??_G?$ctype@D@std@@MEAAPEAXI@Z 0000000180001690 f i infrared.obj
  0001:00000690       ??_E?$ctype@D@std@@MEAAPEAXI@Z 0000000180001690 f i * CIL library *:* CIL module *
- 0001:00000700       ??_Gerror_category@std@@UEAAPEAXI@Z 0000000180001700 f i infrared.obj
- 0001:00000700       ??_E_Generic_error_category@std@@UEAAPEAXI@Z 0000000180001700 f i * CIL library *:* CIL module *
  0001:00000700       ??_G_Iostream_error_category@std@@UEAAPEAXI@Z 0000000180001700 f i infrared.obj
+ 0001:00000700       ??_E_Generic_error_category@std@@UEAAPEAXI@Z 0000000180001700 f i * CIL library *:* CIL module *
+ 0001:00000700       ??_G_Generic_error_category@std@@UEAAPEAXI@Z 0000000180001700 f i infrared.obj
  0001:00000700       ??_Eerror_category@std@@UEAAPEAXI@Z 0000000180001700 f i * CIL library *:* CIL module *
  0001:00000700       ??_E_Iostream_error_category@std@@UEAAPEAXI@Z 0000000180001700 f i * CIL library *:* CIL module *
- 0001:00000700       ??_G_Generic_error_category@std@@UEAAPEAXI@Z 0000000180001700 f i infrared.obj
+ 0001:00000700       ??_Gerror_category@std@@UEAAPEAXI@Z 0000000180001700 f i infrared.obj
  0001:00000730       ?default_error_condition@error_category@std@@UEBA?AVerror_condition@2@H@Z 0000000180001730 f i infrared.obj
  0001:00000740       ?equivalent@error_category@std@@UEBA_NHAEBVerror_condition@2@@Z 0000000180001740 f i infrared.obj
  0001:000007a0       ?equivalent@error_category@std@@UEBA_NAEBVerror_code@2@H@Z 00000001800017a0 f i infrared.obj
  0001:000007c0       ??0_System_error@std@@IEAA@Verror_code@1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z 00000001800017c0 f i infrared.obj
- 0001:000009e0       ??_E_System_error@std@@UEAAPEAXI@Z 00000001800019e0 f i * CIL library *:* CIL module *
- 0001:000009e0       ??_Esystem_error@std@@UEAAPEAXI@Z 00000001800019e0 f i * CIL library *:* CIL module *
- 0001:000009e0       ??_Gfailure@ios_base@std@@UEAAPEAXI@Z 00000001800019e0 f i infrared.obj
  0001:000009e0       ??_Efailure@ios_base@std@@UEAAPEAXI@Z 00000001800019e0 f i * CIL library *:* CIL module *
+ 0001:000009e0       ??_Esystem_error@std@@UEAAPEAXI@Z 00000001800019e0 f i * CIL library *:* CIL module *
  0001:000009e0       ??_G_System_error@std@@UEAAPEAXI@Z 00000001800019e0 f i infrared.obj
+ 0001:000009e0       ??_E_System_error@std@@UEAAPEAXI@Z 00000001800019e0 f i * CIL library *:* CIL module *
  0001:000009e0       ??_Gsystem_error@std@@UEAAPEAXI@Z 00000001800019e0 f i infrared.obj
+ 0001:000009e0       ??_Gfailure@ios_base@std@@UEAAPEAXI@Z 00000001800019e0 f i infrared.obj
  0001:00000a10       ??1system_error@std@@UEAA@XZ 0000000180001a10 f i infrared.obj
  0001:00000a20       ?name@_Generic_error_category@std@@UEBAPEBDXZ 0000000180001a20 f i infrared.obj
  0001:00000a30       ?message@_Generic_error_category@std@@UEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@H@Z 0000000180001a30 f i infrared.obj
@@ -168,33 +168,33 @@
  0001:00003380       ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@M@Z 0000000180004380 f i infrared.obj
  0001:00003570       ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@K@Z 0000000180004570 f i infrared.obj
  0001:00003750       ??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z 0000000180004750 f i infrared.obj
- 0001:00003950       ?EnterHyperCriticalRegion@ContextBase@details@Concurrency@@QEAAHXZ 0000000180004950 f i libconcrt:ContextBase.obj
- 0001:00003950       ?ExitCriticalRegion@ContextBase@details@Concurrency@@QEAAHXZ 0000000180004950 f i libconcrt:ContextBase.obj
+ 0001:00003950       ?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ 0000000180004950 f i infrared.obj
  0001:00003950       ?EnterCriticalRegion@ContextBase@details@Concurrency@@QEAAHXZ 0000000180004950 f i libconcrt:ContextBase.obj
  0001:00003950       ?_Get_deleter@_Ref_count_base@std@@UEBAPEAXAEBVtype_info@@@Z 0000000180004950 f i libcpmt:excptptr.obj
- 0001:00003950       ?PreRunnableSearch@VirtualProcessor@details@Concurrency@@UEAAPEAVInternalContextBase@23@XZ 0000000180004950 f i libconcrt:VirtualProcessor.obj
- 0001:00003950       ?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ 0000000180004950 f i infrared.obj
- 0001:00003950       ?ExitHyperCriticalRegion@ContextBase@details@Concurrency@@QEAAHXZ 0000000180004950 f i libconcrt:ContextBase.obj
+ 0001:00003950       ?EnterHyperCriticalRegion@ContextBase@details@Concurrency@@QEAAHXZ 0000000180004950 f i libconcrt:ContextBase.obj
  0001:00003950       ?GetContextKind@ExternalContextBase@details@Concurrency@@EEBA?AW4ContextKind@ContextBase@23@XZ 0000000180004950 f i libconcrt:ExternalContextBase.obj
  0001:00003950       ?GetDefaultDestination@VirtualProcessor@details@Concurrency@@UEAAPEAUIExecutionContext@3@XZ 0000000180004950 f i libconcrt:VirtualProcessor.obj
+ 0001:00003950       ?PreRunnableSearch@VirtualProcessor@details@Concurrency@@UEAAPEAVInternalContextBase@23@XZ 0000000180004950 f i libconcrt:VirtualProcessor.obj
+ 0001:00003950       ?ExitCriticalRegion@ContextBase@details@Concurrency@@QEAAHXZ 0000000180004950 f i libconcrt:ContextBase.obj
  0001:00003950       ?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ 0000000180004950 f i infrared.obj
+ 0001:00003950       ?ExitHyperCriticalRegion@ContextBase@details@Concurrency@@QEAAHXZ 0000000180004950 f i libconcrt:ContextBase.obj
  0001:00003960       ?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z 0000000180004960 f i infrared.obj
- 0001:00003970       ?seekpos@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@V32@H@Z 0000000180004970 f i infrared.obj
  0001:00003970       ?seekoff@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@_JHH@Z 0000000180004970 f i infrared.obj
+ 0001:00003970       ?seekpos@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA?AV?$fpos@U_Mbstatet@@@2@V32@H@Z 0000000180004970 f i infrared.obj
  0001:00003990       ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z 0000000180004990 f i infrared.obj
  0001:00003a50       ?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z 0000000180004a50 f i infrared.obj
  0001:00003b50       ?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ 0000000180004b50 f i infrared.obj
  0001:00003b90       ?pbackfail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z 0000000180004b90 f i infrared.obj
- 0001:00003b90       ?underflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ 0000000180004b90 f i infrared.obj
- 0001:00003b90       ?overflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z 0000000180004b90 f i infrared.obj
  0001:00003b90       ?GetVirtualProcessorId@ExternalContextBase@details@Concurrency@@UEBAIXZ 0000000180004b90 f i libconcrt:ExternalContextBase.obj
+ 0001:00003b90       ?overflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z 0000000180004b90 f i infrared.obj
+ 0001:00003b90       ?underflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ 0000000180004b90 f i infrared.obj
  0001:00003ba0       ??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ 0000000180004ba0 f i infrared.obj
- 0001:00003bb0       ??_E?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UEAAPEAXI@Z 0000000180004bb0 f i * CIL library *:* CIL module *
  0001:00003bb0       ??_G?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UEAAPEAXI@Z 0000000180004bb0 f i infrared.obj
- 0001:00003c00       ??_E?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UEAAPEAXI@Z 0000000180004c00 f i * CIL library *:* CIL module *
+ 0001:00003bb0       ??_E?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UEAAPEAXI@Z 0000000180004bb0 f i * CIL library *:* CIL module *
  0001:00003c00       ??_G?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UEAAPEAXI@Z 0000000180004c00 f i infrared.obj
- 0001:00003c90       ??_G?$basic_iostream@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000180004c90 f i infrared.obj
+ 0001:00003c00       ??_E?$basic_stringbuf@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UEAAPEAXI@Z 0000000180004c00 f i * CIL library *:* CIL module *
  0001:00003c90       ??_E?$basic_iostream@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000180004c90 f i * CIL library *:* CIL module *
+ 0001:00003c90       ??_G?$basic_iostream@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000180004c90 f i infrared.obj
  0001:00003cd0       ??_E?$basic_ostream@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000180004cd0 f i * CIL library *:* CIL module *
  0001:00003cd0       ??_G?$basic_ostream@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000180004cd0 f i infrared.obj
  0001:00003d40       ??_G?$basic_istream@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000180004d40 f i infrared.obj
@@ -229,10 +229,10 @@
  0001:000059e0       ??0?$basic_iostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z 00000001800069e0 f i infrared.obj
  0001:00005b10       ?_Pnavail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBA_JXZ 0000000180006b10 f i infrared.obj
  0001:00005b30       ?_Gnavail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBA_JXZ 0000000180006b30 f i infrared.obj
- 0001:00005b50       ??_E?$codecvt@DDU_Mbstatet@@@std@@MEAAPEAXI@Z 0000000180006b50 f i libcpmt:cout.obj
- 0001:00005b50       ??_E?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEAAPEAXI@Z 0000000180006b50 f i * CIL library *:* CIL module *
- 0001:00005b50       ??_G?$codecvt@DDU_Mbstatet@@@std@@MEAAPEAXI@Z 0000000180006b50 f i libcpmt:cout.obj
  0001:00005b50       ??_G?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEAAPEAXI@Z 0000000180006b50 f i infrared.obj
+ 0001:00005b50       ??_G?$codecvt@DDU_Mbstatet@@@std@@MEAAPEAXI@Z 0000000180006b50 f i libcpmt:cout.obj
+ 0001:00005b50       ??_E?$num_put@DV?$ostreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@MEAAPEAXI@Z 0000000180006b50 f i * CIL library *:* CIL module *
+ 0001:00005b50       ??_E?$codecvt@DDU_Mbstatet@@@std@@MEAAPEAXI@Z 0000000180006b50 f i libcpmt:cout.obj
  0001:00005b80       ?do_truename@?$numpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 0000000180006b80 f i infrared.obj
  0001:00005bd0       ?do_falsename@?$numpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 0000000180006bd0 f i infrared.obj
  0001:00005c20       ?do_grouping@?$numpunct@D@std@@MEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@XZ 0000000180006c20 f i infrared.obj
@@ -246,8 +246,8 @@
  0001:00007060       ?append@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@_KD@Z 0000000180008060 f i infrared.obj
  0001:00007170       ?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ 0000000180008170 f i infrared.obj
  0001:000072a0       ??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ 00000001800082a0 f i infrared.obj
- 0001:00007340       ??_E?$numpunct@D@std@@MEAAPEAXI@Z 0000000180008340 f i * CIL library *:* CIL module *
  0001:00007340       ??_G?$numpunct@D@std@@MEAAPEAXI@Z 0000000180008340 f i infrared.obj
+ 0001:00007340       ??_E?$numpunct@D@std@@MEAAPEAXI@Z 0000000180008340 f i * CIL library *:* CIL module *
  0001:000073a0       ?_Copy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAX_K0@Z 00000001800083a0 f i infrared.obj
  0001:00007520       ?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADD@Z 0000000180008520 f i infrared.obj
  0001:000075c0       ??$use_facet@V?$ctype@D@std@@@std@@YAAEBV?$ctype@D@0@AEBVlocale@0@@Z 00000001800085c0 f i infrared.obj
@@ -297,8 +297,8 @@
  0001:00008510       ?try_lock@stl_critical_section_concrt@details@Concurrency@@UEAA_NXZ 0000000180009510 f i libcpmt:mutex.obj
  0001:0000851c       ?try_lock_for@stl_critical_section_vista@details@Concurrency@@UEAA_NI@Z 000000018000951c f i libcpmt:mutex.obj
  0001:0000851c       ?try_lock@stl_critical_section_vista@details@Concurrency@@UEAA_NXZ 000000018000951c f i libcpmt:mutex.obj
- 0001:00008534       ?try_lock@stl_critical_section_win7@details@Concurrency@@UEAA_NXZ 0000000180009534 f i libcpmt:mutex.obj
  0001:00008534       ?try_lock_for@stl_critical_section_win7@details@Concurrency@@UEAA_NI@Z 0000000180009534 f i libcpmt:mutex.obj
+ 0001:00008534       ?try_lock@stl_critical_section_win7@details@Concurrency@@UEAA_NXZ 0000000180009534 f i libcpmt:mutex.obj
  0001:0000854c       ?try_lock_for@stl_critical_section_concrt@details@Concurrency@@UEAA_NI@Z 000000018000954c f i libcpmt:mutex.obj
  0001:00008558       ?unlock@stl_critical_section_concrt@details@Concurrency@@UEAAXXZ 0000000180009558 f i libcpmt:mutex.obj
  0001:00008564       ?unlock@stl_critical_section_vista@details@Concurrency@@UEAAXXZ 0000000180009564 f i libcpmt:mutex.obj
@@ -327,58 +327,58 @@
  0001:00008b28       ??0runtime_error@std@@QEAA@AEBV01@@Z 0000000180009b28 f i libcpmt:cout.obj
  0001:00008b68       ??0system_error@std@@QEAA@AEBV01@@Z 0000000180009b68 f i libcpmt:cout.obj
  0001:00008bc4       ??1?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAA@XZ 0000000180009bc4 f i libcpmt:cout.obj
- 0001:00008c70       ??_G?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000180009c70 f i libcpmt:cout.obj
  0001:00008c70       ??_E?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000180009c70 f i libcpmt:cout.obj
- 0001:00008ca4       ??_G__non_rtti_object@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:rtti.obj
- 0001:00008ca4       ??_Gimproper_scheduler_reference@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Gcontext_unblock_unbalanced@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Einvalid_scheduler_policy_value@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Gbad_array_new_length@std@@UEAAPEAXI@Z 0000000180009ca4 f i LIBCMT:throw_bad_alloc.obj
- 0001:00008ca4       ??_Gbad_typeid@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:rtti.obj
- 0001:00008ca4       ??_Ebad_array_new_length@std@@UEAAPEAXI@Z 0000000180009ca4 f i LIBCMT:throw_bad_alloc.obj
+ 0001:00008c70       ??_G?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAPEAXI@Z 0000000180009c70 f i libcpmt:cout.obj
+ 0001:00008ca4       ??_Einvalid_scheduler_policy_key@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
  0001:00008ca4       ??_Econtext_self_unblock@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Einvalid_operation@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:ResourceManager.obj
- 0001:00008ca4       ??_G_Interruption_exception@details@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:TaskCollection.obj
- 0001:00008ca4       ??_Enested_scheduler_missing_detach@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Gimproper_lock@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:rtlocks.obj
- 0001:00008ca4       ??_Gbad_cast@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:cout.obj
+ 0001:00008ca4       ??_Eout_of_range@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Gbad_typeid@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:rtti.obj
+ 0001:00008ca4       ??_Einvalid_oversubscribe_operation@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Eunsupported_os@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Ginvalid_oversubscribe_operation@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
  0001:00008ca4       ??_Gout_of_range@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Ginvalid_argument@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Elength_error@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Einvalid_operation@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:ResourceManager.obj
+ 0001:00008ca4       ??_Ebad_exception@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:frame.obj
+ 0001:00008ca4       ??_Econtext_unblock_unbalanced@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Ginvalid_scheduler_policy_thread_specification@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Glogic_error@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
  0001:00008ca4       ??_Ginvalid_scheduler_policy_value@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
  0001:00008ca4       ??_Eimproper_scheduler_reference@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Ginvalid_scheduler_policy_key@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Elogic_error@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
- 0001:00008ca4       ??_Eimproper_scheduler_attach@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Gbad_alloc@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
- 0001:00008ca4       ??_Ebad_exception@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:frame.obj
- 0001:00008ca4       ??_Glogic_error@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
- 0001:00008ca4       ??_Gexception@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:cout.obj
- 0001:00008ca4       ??_Ginvalid_scheduler_policy_thread_specification@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Gmissing_wait@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Ginvalid_oversubscribe_operation@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Econtext_unblock_unbalanced@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_E_Interruption_exception@details@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:TaskCollection.obj
- 0001:00008ca4       ??_Einvalid_oversubscribe_operation@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Ebad_typeid@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:rtti.obj
- 0001:00008ca4       ??_Ebad_alloc@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
- 0001:00008ca4       ??_Gimproper_scheduler_attach@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Ginvalid_argument@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
- 0001:00008ca4       ??_Gunsupported_os@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
  0001:00008ca4       ??_Gnested_scheduler_missing_detach@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Ebad_cast@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:cout.obj
- 0001:00008ca4       ??_Ginvalid_operation@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:ResourceManager.obj
- 0001:00008ca4       ??_Gbad_exception@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:frame.obj
- 0001:00008ca4       ??_Elength_error@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
- 0001:00008ca4       ??_Eunsupported_os@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Gcontext_self_unblock@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Eexception@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:cout.obj
- 0001:00008ca4       ??_Einvalid_scheduler_policy_key@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_Emissing_wait@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
- 0001:00008ca4       ??_E__non_rtti_object@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:rtti.obj
+ 0001:00008ca4       ??_Gbad_cast@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:cout.obj
  0001:00008ca4       ??_Glength_error@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
- 0001:00008ca4       ??_Einvalid_argument@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Gbad_exception@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:frame.obj
+ 0001:00008ca4       ??_Emissing_wait@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Ebad_alloc@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Enested_scheduler_missing_detach@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Gimproper_scheduler_attach@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
  0001:00008ca4       ??_Eimproper_lock@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:rtlocks.obj
- 0001:00008ca4       ??_Eout_of_range@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Gmissing_wait@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_E__non_rtti_object@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:rtti.obj
+ 0001:00008ca4       ??_Ginvalid_operation@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:ResourceManager.obj
+ 0001:00008ca4       ??_Einvalid_scheduler_policy_value@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Gcontext_self_unblock@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_G_Interruption_exception@details@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:TaskCollection.obj
+ 0001:00008ca4       ??_Gcontext_unblock_unbalanced@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Gbad_array_new_length@std@@UEAAPEAXI@Z 0000000180009ca4 f i LIBCMT:throw_bad_alloc.obj
+ 0001:00008ca4       ??_Eimproper_scheduler_attach@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_G__non_rtti_object@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:rtti.obj
+ 0001:00008ca4       ??_Einvalid_argument@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Ebad_cast@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:cout.obj
+ 0001:00008ca4       ??_Gimproper_lock@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:rtlocks.obj
+ 0001:00008ca4       ??_Gbad_alloc@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Ginvalid_scheduler_policy_key@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Eexception@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:cout.obj
  0001:00008ca4       ??_Einvalid_scheduler_policy_thread_specification@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Gunsupported_os@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Gimproper_scheduler_reference@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:Exceptions.obj
+ 0001:00008ca4       ??_Ebad_array_new_length@std@@UEAAPEAXI@Z 0000000180009ca4 f i LIBCMT:throw_bad_alloc.obj
+ 0001:00008ca4       ??_Gexception@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:cout.obj
+ 0001:00008ca4       ??_Elogic_error@std@@UEAAPEAXI@Z 0000000180009ca4 f i libcpmt:xthrow.obj
+ 0001:00008ca4       ??_Ebad_typeid@std@@UEAAPEAXI@Z 0000000180009ca4 f i libvcruntime:rtti.obj
+ 0001:00008ca4       ??_E_Interruption_exception@details@Concurrency@@UEAAPEAXI@Z 0000000180009ca4 f i libconcrt:TaskCollection.obj
  0001:00008ce8       ?_Endwrite@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IEAA_NXZ 0000000180009ce8 f i libcpmt:cout.obj
  0001:00008e9c       ?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z 0000000180009e9c f i libcpmt:cout.obj
  0001:00008f60       ?_Init@?$basic_filebuf@DU?$char_traits@D@std@@@std@@IEAAXPEAU_iobuf@@W4_Initfl@12@@Z 0000000180009f60 f i libcpmt:cout.obj
@@ -386,8 +386,8 @@
  0001:000090ec       ?_Lock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAXXZ 000000018000a0ec f i libcpmt:cout.obj
  0001:00009108       ?_Unlock@?$basic_filebuf@DU?$char_traits@D@std@@@std@@UEAAXXZ 000000018000a108 f i libcpmt:cout.obj
  0001:00009124       ?do_length@?$codecvt@DDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1_K@Z 000000018000a124 f i libcpmt:cout.obj
- 0001:00009138       ?do_out@?$codecvt@DDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEAD3AEAPEAD@Z 000000018000a138 f i libcpmt:cout.obj
  0001:00009138       ?do_in@?$codecvt@DDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEAD3AEAPEAD@Z 000000018000a138 f i libcpmt:cout.obj
+ 0001:00009138       ?do_out@?$codecvt@DDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEAD3AEAPEAD@Z 000000018000a138 f i libcpmt:cout.obj
  0001:00009154       ?do_unshift@?$codecvt@DDU_Mbstatet@@@std@@MEBAHAEAU_Mbstatet@@PEAD1AEAPEAD@Z 000000018000a154 f i libcpmt:cout.obj
  0001:00009160       ?imbue@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z 000000018000a160 f i libcpmt:cout.obj
  0001:00009184       ?overflow@?$basic_filebuf@DU?$char_traits@D@std@@@std@@MEAAHH@Z 000000018000a184 f i libcpmt:cout.obj
@@ -421,32 +421,32 @@
  0001:0000a0c0       ??0logic_error@std@@QEAA@AEBV01@@Z 000000018000b0c0 f i libcpmt:xthrow.obj
  0001:0000a100       ??0out_of_range@std@@QEAA@AEBV01@@Z 000000018000b100 f i libcpmt:xthrow.obj
  0001:0000a140       ??0out_of_range@std@@QEAA@PEBD@Z 000000018000b140 f i libcpmt:xthrow.obj
- 0001:0000a18c       ??1bad_alloc@std@@UEAA@XZ  000000018000b18c f i libcpmt:xthrow.obj
- 0001:0000a18c       ??1improper_scheduler_attach@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
- 0001:0000a18c       ??1scheduler_worker_creation_error@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
- 0001:0000a18c       ??1invalid_operation@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:ResourceManager.obj
- 0001:0000a18c       ??1invalid_argument@std@@UEAA@XZ 000000018000b18c f i libcpmt:xthrow.obj
- 0001:0000a18c       ??1bad_exception@std@@UEAA@XZ 000000018000b18c f i libvcruntime:frame.obj
- 0001:0000a18c       ??1bad_array_new_length@std@@UEAA@XZ 000000018000b18c f i LIBCMT:throw_bad_alloc.obj
- 0001:0000a18c       ??1invalid_scheduler_policy_key@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
- 0001:0000a18c       ??1__non_rtti_object@std@@UEAA@XZ 000000018000b18c f i libvcruntime:rtti.obj
- 0001:0000a18c       ??1context_unblock_unbalanced@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
  0001:0000a18c       ??1nested_scheduler_missing_detach@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
- 0001:0000a18c       ??1improper_lock@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:rtlocks.obj
- 0001:0000a18c       ??1length_error@std@@UEAA@XZ 000000018000b18c f i libcpmt:xthrow.obj
- 0001:0000a18c       ??1out_of_range@std@@UEAA@XZ 000000018000b18c f i libcpmt:xthrow.obj
- 0001:0000a18c       ??1invalid_oversubscribe_operation@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
- 0001:0000a18c       ??1missing_wait@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
- 0001:0000a18c       ??1invalid_scheduler_policy_thread_specification@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
- 0001:0000a18c       ??1scheduler_resource_allocation_error@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Platform.obj
- 0001:0000a18c       ??1context_self_unblock@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
- 0001:0000a18c       ??1invalid_scheduler_policy_value@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
  0001:0000a18c       ??1unsupported_os@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
- 0001:0000a18c       ??1bad_cast@std@@UEAA@XZ   000000018000b18c f i libcpmt:cout.obj
- 0001:0000a18c       ??1improper_scheduler_reference@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
+ 0001:0000a18c       ??1length_error@std@@UEAA@XZ 000000018000b18c f i libcpmt:xthrow.obj
+ 0001:0000a18c       ??1bad_exception@std@@UEAA@XZ 000000018000b18c f i libvcruntime:frame.obj
+ 0001:0000a18c       ??1invalid_argument@std@@UEAA@XZ 000000018000b18c f i libcpmt:xthrow.obj
+ 0001:0000a18c       ??1invalid_scheduler_policy_thread_specification@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
+ 0001:0000a18c       ??1invalid_operation@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:ResourceManager.obj
+ 0001:0000a18c       ??1context_self_unblock@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
+ 0001:0000a18c       ??1bad_array_new_length@std@@UEAA@XZ 000000018000b18c f i LIBCMT:throw_bad_alloc.obj
+ 0001:0000a18c       ??1scheduler_resource_allocation_error@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Platform.obj
+ 0001:0000a18c       ??1missing_wait@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
+ 0001:0000a18c       ??1improper_lock@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:rtlocks.obj
+ 0001:0000a18c       ??1invalid_oversubscribe_operation@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
  0001:0000a18c       ??1_Interruption_exception@details@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:TaskCollection.obj
- 0001:0000a1a0       ?__scrt_throw_std_bad_alloc@@YAXXZ 000000018000b1a0 f   LIBCMT:throw_bad_alloc.obj
+ 0001:0000a18c       ??1invalid_scheduler_policy_value@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
+ 0001:0000a18c       ??1__non_rtti_object@std@@UEAA@XZ 000000018000b18c f i libvcruntime:rtti.obj
+ 0001:0000a18c       ??1bad_cast@std@@UEAA@XZ   000000018000b18c f i libcpmt:cout.obj
+ 0001:0000a18c       ??1out_of_range@std@@UEAA@XZ 000000018000b18c f i libcpmt:xthrow.obj
+ 0001:0000a18c       ??1improper_scheduler_attach@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
+ 0001:0000a18c       ??1improper_scheduler_reference@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
+ 0001:0000a18c       ??1bad_alloc@std@@UEAA@XZ  000000018000b18c f i libcpmt:xthrow.obj
+ 0001:0000a18c       ??1scheduler_worker_creation_error@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
+ 0001:0000a18c       ??1invalid_scheduler_policy_key@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
+ 0001:0000a18c       ??1context_unblock_unbalanced@Concurrency@@UEAA@XZ 000000018000b18c f i libconcrt:Exceptions.obj
  0001:0000a1a0       ?_Xbad_alloc@std@@YAXXZ    000000018000b1a0 f   libcpmt:xthrow.obj
+ 0001:0000a1a0       ?__scrt_throw_std_bad_alloc@@YAXXZ 000000018000b1a0 f   LIBCMT:throw_bad_alloc.obj
  0001:0000a1c0       ?_Xlength_error@std@@YAXPEBD@Z 000000018000b1c0 f   libcpmt:xthrow.obj
  0001:0000a1e4       ?_Xout_of_range@std@@YAXPEBD@Z 000000018000b1e4 f   libcpmt:xthrow.obj
  0001:0000a208       ?_Addstd@ios_base@std@@SAXPEAV12@@Z 000000018000b208 f   libcpmt:ios.obj
@@ -489,11 +489,11 @@
  0001:0000b57c       __crtWakeAllConditionVariable 000000018000c57c f   libcpmt:winapisupp.obj
  0001:0000b5b4       __crtWakeConditionVariable 000000018000c5b4 f   libcpmt:winapisupp.obj
  0001:0000b5ec       _Mtxdst                    000000018000c5ec f   libcpmt:xmtx.obj
- 0001:0000b5ec       ??1_NonReentrantBlockingLock@details@Concurrency@@QEAA@XZ 000000018000c5ec f   libconcrt:rtlocks.obj
  0001:0000b5ec       ??1_ReentrantBlockingLock@details@Concurrency@@QEAA@XZ 000000018000c5ec f   libconcrt:rtlocks.obj
+ 0001:0000b5ec       ??1_NonReentrantBlockingLock@details@Concurrency@@QEAA@XZ 000000018000c5ec f   libconcrt:rtlocks.obj
  0001:0000b5f4       _Mtxinit                   000000018000c5f4 f   libcpmt:xmtx.obj
- 0001:0000b604       _Mtxunlock                 000000018000c604 f   libcpmt:xmtx.obj
  0001:0000b604       ?_Release@_NonReentrantBlockingLock@details@Concurrency@@QEAAXXZ 000000018000c604 f   libconcrt:rtlocks.obj
+ 0001:0000b604       _Mtxunlock                 000000018000c604 f   libcpmt:xmtx.obj
  0001:0000b604       ?_Release@_ReentrantBlockingLock@details@Concurrency@@QEAAXXZ 000000018000c604 f   libconcrt:rtlocks.obj
  0001:0000b60c       ?_Atexit@@YAXP6AXXZ@Z      000000018000c60c f   libcpmt:iosptrs.obj
  0001:0000b64c       __crtLCMapStringA          000000018000c64c f   libcpmt:StlLCMapStringA.obj
@@ -523,8 +523,8 @@
  0001:0000c1f8       _onexit                    000000018000d1f8 f   LIBCMT:utility.obj
  0001:0000c248       atexit                     000000018000d248 f   LIBCMT:utility.obj
  0001:0000c260       ??3@YAXPEAX@Z              000000018000d260 f   LIBCMT:delete_scalar.obj
- 0001:0000c268       ??_V@YAXPEAX@Z             000000018000d268 f   LIBCMT:delete_array.obj
  0001:0000c268       ??3@YAXPEAX_K@Z            000000018000d268 f   LIBCMT:delete_scalar_size.obj
+ 0001:0000c268       ??_V@YAXPEAX@Z             000000018000d268 f   LIBCMT:delete_array.obj
  0001:0000c270       ??_U@YAPEAX_K@Z            000000018000d270 f   LIBCMT:new_array.obj
  0001:0000c278       __raise_securityfailure    000000018000d278 f   LIBCMT:gs_report.obj
  0001:0000c2ac       __report_gsfailure         000000018000d2ac f   LIBCMT:gs_report.obj
@@ -537,21 +537,21 @@
  0001:0000c978       __GSHandlerCheck           000000018000d978 f   LIBCMT:_gshandler_.obj
  0001:0000c998       __GSHandlerCheckCommon     000000018000d998 f   LIBCMT:_gshandler_.obj
  0001:0000c9f4       _guard_check_icall         000000018000d9f4 f i LIBCMT:checkcfg.obj
- 0001:0000c9fc       ??_Etype_info@@UEAAPEAXI@Z 000000018000d9fc f i LIBCMT:std_type_info_static.obj
  0001:0000c9fc       ??_Gtype_info@@UEAAPEAXI@Z 000000018000d9fc f i LIBCMT:std_type_info_static.obj
+ 0001:0000c9fc       ??_Etype_info@@UEAAPEAXI@Z 000000018000d9fc f i LIBCMT:std_type_info_static.obj
  0001:0000ca28       __GSHandlerCheck_EH        000000018000da28 f   LIBCMT:gshandlereh.obj
- 0001:0000cac0       __chkstk                   000000018000dac0 f   LIBCMT:_chkstk_.obj
  0001:0000cac0       _alloca_probe              000000018000dac0 f   LIBCMT:_chkstk_.obj
+ 0001:0000cac0       __chkstk                   000000018000dac0 f   LIBCMT:_chkstk_.obj
  0001:0000cb14       __crt_debugger_hook        000000018000db14 f   LIBCMT:utility_desktop.obj
  0001:0000cb1c       __scrt_fastfail            000000018000db1c f   LIBCMT:utility_desktop.obj
  0001:0000cc64       ??0bad_array_new_length@std@@QEAA@AEBV01@@Z 000000018000dc64 f i LIBCMT:throw_bad_alloc.obj
  0001:0000cca4       ??0bad_array_new_length@std@@QEAA@XZ 000000018000dca4 f i LIBCMT:throw_bad_alloc.obj
  0001:0000ccc4       ?__scrt_throw_std_bad_array_new_length@@YAXXZ 000000018000dcc4 f   LIBCMT:throw_bad_alloc.obj
  0001:0000cce4       __isa_available_init       000000018000dce4 f   LIBCMT:_cpu_disp_.obj
- 0001:0000ceac       ?do_encoding@codecvt_base@std@@MEBAHXZ 000000018000deac f   libcpmt:cout.obj
- 0001:0000ceac       DllMain                    000000018000deac f   LIBCMT:dll_dllmain_stub.obj
- 0001:0000ceac       ?do_max_length@codecvt_base@std@@MEBAHXZ 000000018000deac f   libcpmt:cout.obj
  0001:0000ceac       _get_startup_argv_mode     000000018000deac f   LIBCMT:argv_mode.obj
+ 0001:0000ceac       ?do_encoding@codecvt_base@std@@MEBAHXZ 000000018000deac f   libcpmt:cout.obj
+ 0001:0000ceac       ?do_max_length@codecvt_base@std@@MEBAHXZ 000000018000deac f   libcpmt:cout.obj
+ 0001:0000ceac       DllMain                    000000018000deac f   LIBCMT:dll_dllmain_stub.obj
  0001:0000ceac       ?GetContextKind@ThreadInternalContext@details@Concurrency@@UEBA?AW4ContextKind@ContextBase@23@XZ 000000018000deac f   libconcrt:ThreadScheduler.obj
  0001:0000ceb4       __scrt_is_ucrt_dll_in_use  000000018000deb4 f   LIBCMT:ucrt_detection.obj
  0001:0000cec0       __security_init_cookie     000000018000dec0 f   LIBCMT:gs_support.obj
@@ -574,9 +574,9 @@
  0001:0000d314       ?DispatchNodeTimeoutTimer@LockQueueNode@details@Concurrency@@SAXPEAU_TP_CALLBACK_INSTANCE@@PEAXPEAU_TP_TIMER@@@Z 000000018000e314 f i libconcrt:rtlocks.obj
  0001:0000d39c       ?DispatchNodeTimeoutTimerXP@LockQueueNode@details@Concurrency@@SAXPEAXE@Z 000000018000e39c f i libconcrt:rtlocks.obj
  0001:0000d414       ?UpdateQueuePosition@LockQueueNode@details@Concurrency@@QEAAXPEAV123@@Z 000000018000e414 f i libconcrt:rtlocks.obj
- 0001:0000d498       ?_Acquire@_ReentrantBlockingLock@details@Concurrency@@QEAAXXZ 000000018000e498 f   libconcrt:rtlocks.obj
  0001:0000d498       ?_Acquire@_NonReentrantBlockingLock@details@Concurrency@@QEAAXXZ 000000018000e498 f   libconcrt:rtlocks.obj
  0001:0000d498       _Mtxlock                   000000018000e498 f   libcpmt:xmtx.obj
+ 0001:0000d498       ?_Acquire@_ReentrantBlockingLock@details@Concurrency@@QEAAXXZ 000000018000e498 f   libconcrt:rtlocks.obj
  0001:0000d4a0       ?_AcquireRead@_ReaderWriterLock@details@Concurrency@@QEAAXXZ 000000018000e4a0 f   libconcrt:rtlocks.obj
  0001:0000d4e0       ?_AcquireWrite@_ReaderWriterLock@details@Concurrency@@QEAAXXZ 000000018000e4e0 f   libconcrt:rtlocks.obj
  0001:0000d51c       ?_Acquire_lock@critical_section@Concurrency@@QEAA_NPEAX_N@Z 000000018000e51c f   libconcrt:rtlocks.obj
@@ -624,8 +624,8 @@
  0001:0000e330       ?__UnregisterWait@platform@details@Concurrency@@YAXPEAX@Z 000000018000f330 f   libconcrt:Platform.obj
  0001:0000e338       ?__WaitForThread@platform@details@Concurrency@@YAKPEAXK@Z 000000018000f338 f   libconcrt:Platform.obj
  0001:0000e344       _concrt_static_cleanup     000000018000f344 f   libconcrt:utils.obj
- 0001:0000e35c       ?DecodePointer@Security@details@Concurrency@@SAPEAXPEAX@Z 000000018000f35c f   libconcrt:utils.obj
  0001:0000e35c       ?EncodePointer@Security@details@Concurrency@@SAPEAXPEAX@Z 000000018000f35c f   libconcrt:utils.obj
+ 0001:0000e35c       ?DecodePointer@Security@details@Concurrency@@SAPEAXPEAX@Z 000000018000f35c f   libconcrt:utils.obj
  0001:0000e368       ?DeleteAsyncTimerAndUnloadLibrary@details@Concurrency@@YAXPEAU_TP_TIMER@@@Z 000000018000f368 f   libconcrt:utils.obj
  0001:0000e3b0       ?FreeLibraryAndDestroyThread@details@Concurrency@@YAXK@Z 000000018000f3b0 f   libconcrt:utils.obj
  0001:0000e3e8       ?InitializeCookie@Security@details@Concurrency@@SA_KXZ 000000018000f3e8 f   libconcrt:utils.obj
@@ -637,8 +637,8 @@
  0001:0000e658       ?UnRegisterAsyncWaitAndUnloadLibrary@details@Concurrency@@YAXPEAU_TP_CALLBACK_INSTANCE@@PEAU_TP_WAIT@@@Z 000000018000f658 f   libconcrt:utils.obj
  0001:0000e6a4       ?_Acquire@_CriticalNonReentrantLock@details@Concurrency@@QEAAXXZ 000000018000f6a4 f   libconcrt:utils.obj
  0001:0000e6ec       ?_Acquire@_HyperNonReentrantLock@details@Concurrency@@QEAAXXZ 000000018000f6ec f   libconcrt:utils.obj
- 0001:0000e734       ?_Release@_CriticalNonReentrantLock@details@Concurrency@@QEAAXXZ 000000018000f734 f   libconcrt:utils.obj
  0001:0000e734       ?_Release@_HyperNonReentrantLock@details@Concurrency@@QEAAXXZ 000000018000f734 f   libconcrt:utils.obj
+ 0001:0000e734       ?_Release@_CriticalNonReentrantLock@details@Concurrency@@QEAAXXZ 000000018000f734 f   libconcrt:utils.obj
  0001:0000e740       ?_Sleep0@details@Concurrency@@YAXXZ 000000018000f740 f   libconcrt:utils.obj
  0001:0000e748       ?_TryAcquire@_CriticalNonReentrantLock@details@Concurrency@@QEAA_NXZ 000000018000f748 f   libconcrt:utils.obj
  0001:0000e780       ?_UnderlyingYield@details@Concurrency@@YAXXZ 000000018000f780 f   libconcrt:utils.obj
@@ -656,9 +656,9 @@
  0001:0000e964       ??0scheduler_resource_allocation_error@Concurrency@@QEAA@J@Z 000000018000f964 f   libconcrt:Exceptions.obj
  0001:0000e980       ??0scheduler_worker_creation_error@Concurrency@@QEAA@J@Z 000000018000f980 f   libconcrt:Exceptions.obj
  0001:0000e99c       ??0unsupported_os@Concurrency@@QEAA@XZ 000000018000f99c f   libconcrt:Exceptions.obj
- 0001:0000e9b4       ??_Escheduler_resource_allocation_error@Concurrency@@UEAAPEAXI@Z 000000018000f9b4 f i libconcrt:Platform.obj
- 0001:0000e9b4       ??_Gscheduler_worker_creation_error@Concurrency@@UEAAPEAXI@Z 000000018000f9b4 f i libconcrt:Exceptions.obj
  0001:0000e9b4       ??_Escheduler_worker_creation_error@Concurrency@@UEAAPEAXI@Z 000000018000f9b4 f i libconcrt:Exceptions.obj
+ 0001:0000e9b4       ??_Gscheduler_worker_creation_error@Concurrency@@UEAAPEAXI@Z 000000018000f9b4 f i libconcrt:Exceptions.obj
+ 0001:0000e9b4       ??_Escheduler_resource_allocation_error@Concurrency@@UEAAPEAXI@Z 000000018000f9b4 f i libconcrt:Platform.obj
  0001:0000e9b4       ??_Gscheduler_resource_allocation_error@Concurrency@@UEAAPEAXI@Z 000000018000f9b4 f i libconcrt:Platform.obj
  0001:0000e9f8       ?Block@Context@Concurrency@@SAXXZ 000000018000f9f8 f   libconcrt:Context.obj
  0001:0000ea4c       ?CurrentContext@Context@Concurrency@@SAPEAV12@XZ 000000018000fa4c f   libconcrt:Context.obj
@@ -699,8 +699,8 @@
  0001:00010a6c       ?FindBestFitIdleAllocation@ResourceManager@details@Concurrency@@AEAAIIPEAUDynamicAllocationData@23@I@Z 0000000180011a6c f   libconcrt:ResourceManager.obj
  0001:00010b88       ?FindCoreForPartiallyFilledNode@ResourceManager@details@Concurrency@@AEAA_NAEAI0PEAUDynamicAllocationData@23@I@Z 0000000180011b88 f   libconcrt:ResourceManager.obj
  0001:00010ce0       ?FlushStoreBuffers@ResourceManager@details@Concurrency@@QEAAXXZ 0000000180011ce0 f   libconcrt:ResourceManager.obj
- 0001:00010d1c       ?GetAvailableNodeCount@ResourceManager@details@Concurrency@@UEBAIXZ 0000000180011d1c f i libconcrt:ResourceManager.obj
  0001:00010d1c       ?GetNumberOfVirtualProcessors@SchedulerBase@details@Concurrency@@UEBAIXZ 0000000180011d1c f i libconcrt:SchedulerBase.obj
+ 0001:00010d1c       ?GetAvailableNodeCount@ResourceManager@details@Concurrency@@UEBAIXZ 0000000180011d1c f i libconcrt:ResourceManager.obj
  0001:00010d20       ?GetCoreCount@ResourceManager@details@Concurrency@@SAIXZ 0000000180011d20 f   libconcrt:ResourceManager.obj
  0001:00010da4       ?GetCurrentNodeAndCore@ResourceManager@details@Concurrency@@QEAAIPEAI@Z 0000000180011da4 f   libconcrt:ResourceManager.obj
  0001:00010ee4       ?GetExecutionResourceCount@TopologyObject@GlobalNode@details@Concurrency@@UEBAIXZ 0000000180011ee4 f i libconcrt:ResourceManager.obj
@@ -762,14 +762,14 @@
  0001:00013d28       ??1Scheduler@Concurrency@@MEAA@XZ 0000000180014d28 f i libconcrt:SchedulerBase.obj
  0001:00013d34       ??1SchedulerBase@details@Concurrency@@UEAA@XZ 0000000180014d34 f   libconcrt:SchedulerBase.obj
  0001:00013e24       ??1_Scoped_lock@_HyperNonReentrantLock@details@Concurrency@@QEAA@XZ 0000000180014e24 f i libconcrt:SchedulerBase.obj
+ 0001:00013e40       ??_ECacheLocalScheduleGroup@details@Concurrency@@UEAAPEAXI@Z 0000000180014e40 f i libconcrt:SchedulerBase.obj
  0001:00013e40       ??_GCacheLocalScheduleGroup@details@Concurrency@@UEAAPEAXI@Z 0000000180014e40 f i libconcrt:SchedulerBase.obj
  0001:00013e40       ??_EScheduleGroupBase@details@Concurrency@@UEAAPEAXI@Z 0000000180014e40 f i libconcrt:ScheduleGroupBase.obj
- 0001:00013e40       ??_ECacheLocalScheduleGroup@details@Concurrency@@UEAAPEAXI@Z 0000000180014e40 f i libconcrt:SchedulerBase.obj
  0001:00013e40       ??_GScheduleGroupBase@details@Concurrency@@UEAAPEAXI@Z 0000000180014e40 f i libconcrt:ScheduleGroupBase.obj
  0001:00013e6c       ??_EFairScheduleGroup@details@Concurrency@@UEAAPEAXI@Z 0000000180014e6c f i libconcrt:SchedulerBase.obj
  0001:00013e6c       ??_GFairScheduleGroup@details@Concurrency@@UEAAPEAXI@Z 0000000180014e6c f i libconcrt:SchedulerBase.obj
- 0001:00013e98       ??_GCacheLocalScheduleGroupSegment@details@Concurrency@@UEAAPEAXI@Z 0000000180014e98 f i libconcrt:SchedulerBase.obj
  0001:00013e98       ??_ECacheLocalScheduleGroupSegment@details@Concurrency@@UEAAPEAXI@Z 0000000180014e98 f i libconcrt:SchedulerBase.obj
+ 0001:00013e98       ??_GCacheLocalScheduleGroupSegment@details@Concurrency@@UEAAPEAXI@Z 0000000180014e98 f i libconcrt:SchedulerBase.obj
  0001:00013e98       ??_EFairScheduleGroupSegment@details@Concurrency@@UEAAPEAXI@Z 0000000180014e98 f i libconcrt:SchedulerBase.obj
  0001:00013e98       ??_GFairScheduleGroupSegment@details@Concurrency@@UEAAPEAXI@Z 0000000180014e98 f i libconcrt:SchedulerBase.obj
  0001:00013ecc       ??_ERealizedChore@details@Concurrency@@UEAAPEAXI@Z 0000000180014ecc f i libconcrt:SchedulerBase.obj
@@ -778,8 +778,8 @@
  0001:00013ef8       ??_GScheduleGroup@Concurrency@@MEAAPEAXI@Z 0000000180014ef8 f i libconcrt:SchedulerBase.obj
  0001:00013f24       ??_EScheduler@Concurrency@@MEAAPEAXI@Z 0000000180014f24 f i libconcrt:SchedulerBase.obj
  0001:00013f24       ??_GScheduler@Concurrency@@MEAAPEAXI@Z 0000000180014f24 f i libconcrt:SchedulerBase.obj
- 0001:00013f50       ??_ESchedulerBase@details@Concurrency@@UEAAPEAXI@Z 0000000180014f50 f i libconcrt:SchedulerBase.obj
  0001:00013f50       ??_GSchedulerBase@details@Concurrency@@UEAAPEAXI@Z 0000000180014f50 f i libconcrt:SchedulerBase.obj
+ 0001:00013f50       ??_ESchedulerBase@details@Concurrency@@UEAAPEAXI@Z 0000000180014f50 f i libconcrt:SchedulerBase.obj
  0001:00013f84       ??_E_Chore@details@Concurrency@@MEAAPEAXI@Z 0000000180014f84 f i libconcrt:SchedulerBase.obj
  0001:00013f84       ??_G_Chore@details@Concurrency@@MEAAPEAXI@Z 0000000180014f84 f i libconcrt:SchedulerBase.obj
  0001:00013fb0       ?Add@?$ListArray@VScheduleGroupBase@details@Concurrency@@@details@Concurrency@@QEAAHPEAVScheduleGroupBase@23@@Z 0000000180014fb0 f i libconcrt:SchedulerBase.obj
@@ -922,11 +922,11 @@
  0001:00018a98       ?DispatchEventTimerXP@TimedSingleWaitBlock@details@Concurrency@@SAXPEAXE@Z 0000000180019a98 f   libconcrt:event.obj
  0001:00018acc       ?GetSharedTimerQueue@details@Concurrency@@YAPEAXXZ 0000000180019acc f   libconcrt:event.obj
  0001:00018b80       ?NotifyCompletedNode@MultiWaitBlock@details@Concurrency@@QEAAXXZ 0000000180019b80 f   libconcrt:event.obj
+ 0001:00018ba8       ?Destroy@SingleWaitBlock@details@Concurrency@@UEAAXXZ 0000000180019ba8 f   libconcrt:event.obj
+ 0001:00018ba8       ?Reset@WaitAnyBlock@details@Concurrency@@UEAA_NXZ 0000000180019ba8 f   libconcrt:event.obj
+ 0001:00018ba8       ?SweepResetNode@WaitAnyBlock@details@Concurrency@@UEAA_NXZ 0000000180019ba8 f   libconcrt:event.obj
  0001:00018ba8       ?SweepResetNode@SingleWaitBlock@details@Concurrency@@UEAA_NXZ 0000000180019ba8 f   libconcrt:event.obj
  0001:00018ba8       ?Reset@SingleWaitBlock@details@Concurrency@@UEAA_NXZ 0000000180019ba8 f   libconcrt:event.obj
- 0001:00018ba8       ?SweepResetNode@WaitAnyBlock@details@Concurrency@@UEAA_NXZ 0000000180019ba8 f   libconcrt:event.obj
- 0001:00018ba8       ?Reset@WaitAnyBlock@details@Concurrency@@UEAA_NXZ 0000000180019ba8 f   libconcrt:event.obj
- 0001:00018ba8       ?Destroy@SingleWaitBlock@details@Concurrency@@UEAAXXZ 0000000180019ba8 f   libconcrt:event.obj
  0001:00018bac       ?Reset@WaitAllBlock@details@Concurrency@@UEAA_NXZ 0000000180019bac f   libconcrt:event.obj
  0001:00018bec       ?Satisfy@SingleWaitBlock@details@Concurrency@@UEAA_NPEAPEAVContext@3@PEAVEventWaitNode@23@@Z 0000000180019bec f   libconcrt:event.obj
  0001:00018c58       ?Satisfy@TimedSingleWaitBlock@details@Concurrency@@UEAA_NPEAPEAVContext@3@PEAVEventWaitNode@23@@Z 0000000180019c58 f   libconcrt:event.obj
@@ -958,8 +958,8 @@
  0001:00019f38       ??1_Scoped_lock_read@?$SafeRWList@UListEntry@details@Concurrency@@VNoCount@CollectionTypes@23@V_ReaderWriterLock@23@@details@Concurrency@@QEAA@XZ 000000018001af38 f i libconcrt:ContextBase.obj
  0001:00019f58       ??_GContext@Concurrency@@MEAAPEAXI@Z 000000018001af58 f i libconcrt:ContextBase.obj
  0001:00019f58       ??_EContext@Concurrency@@MEAAPEAXI@Z 000000018001af58 f i libconcrt:ContextBase.obj
- 0001:00019f84       ??_GContextBase@details@Concurrency@@UEAAPEAXI@Z 000000018001af84 f i libconcrt:ContextBase.obj
  0001:00019f84       ??_EContextBase@details@Concurrency@@UEAAPEAXI@Z 000000018001af84 f i libconcrt:ContextBase.obj
+ 0001:00019f84       ??_GContextBase@details@Concurrency@@UEAAPEAXI@Z 000000018001af84 f i libconcrt:ContextBase.obj
  0001:00019fb8       ?Add@?$ListArray@VWorkQueue@details@Concurrency@@@details@Concurrency@@QEAAHPEAVWorkQueue@23@@Z 000000018001afb8 f i libconcrt:ContextBase.obj
  0001:0001a138       ?AddStealer@ContextBase@details@Concurrency@@QEAAXPEAV123@_N@Z 000000018001b138 f   libconcrt:ContextBase.obj
  0001:0001a188       ?AddTail@?$SafeRWList@UListEntry@details@Concurrency@@VNoCount@CollectionTypes@23@V_ReaderWriterLock@23@@details@Concurrency@@QEAAXPEAUListEntry@23@@Z 000000018001b188 f i libconcrt:ContextBase.obj
@@ -998,12 +998,12 @@
  0001:0001af54       ?Remove@?$SafeRWList@UListEntry@details@Concurrency@@VNoCount@CollectionTypes@23@V_ReaderWriterLock@23@@details@Concurrency@@QEAAXPEAUListEntry@23@@Z 000000018001bf54 f i libconcrt:ContextBase.obj
  0001:0001afc4       ?RemoveStealer@ContextBase@details@Concurrency@@QEAAXPEAV123@@Z 000000018001bfc4 f   libconcrt:ContextBase.obj
  0001:0001afd8       ?SetAsCurrentTls@ContextBase@details@Concurrency@@IEAAXXZ 000000018001bfd8 f   libconcrt:ContextBase.obj
- 0001:0001afe8       ?StaticDelete@Segment@?$Mailbox@V_UnrealizedChore@details@Concurrency@@@details@Concurrency@@SAXPEAU1234@@Z 000000018001bfe8 f i libconcrt:ContextBase.obj
  0001:0001afe8       ?StaticDelete@Segment@?$Mailbox@VInternalContextBase@details@Concurrency@@@details@Concurrency@@SAXPEAU1234@@Z 000000018001bfe8 f i libconcrt:VirtualProcessor.obj
- 0001:0001b01c       ?StaticEnterCriticalRegion@ContextBase@details@Concurrency@@SAXXZ 000000018001c01c f   libconcrt:ContextBase.obj
- 0001:0001b01c       ?StaticEnterHyperCriticalRegion@ContextBase@details@Concurrency@@SAXXZ 000000018001c01c f   libconcrt:ContextBase.obj
- 0001:0001b01c       ?StaticExitCriticalRegion@ContextBase@details@Concurrency@@SAXXZ 000000018001c01c f   libconcrt:ContextBase.obj
+ 0001:0001afe8       ?StaticDelete@Segment@?$Mailbox@V_UnrealizedChore@details@Concurrency@@@details@Concurrency@@SAXPEAU1234@@Z 000000018001bfe8 f i libconcrt:ContextBase.obj
  0001:0001b01c       ?StaticExitHyperCriticalRegion@ContextBase@details@Concurrency@@SAXXZ 000000018001c01c f   libconcrt:ContextBase.obj
+ 0001:0001b01c       ?StaticExitCriticalRegion@ContextBase@details@Concurrency@@SAXXZ 000000018001c01c f   libconcrt:ContextBase.obj
+ 0001:0001b01c       ?StaticEnterHyperCriticalRegion@ContextBase@details@Concurrency@@SAXXZ 000000018001c01c f   libconcrt:ContextBase.obj
+ 0001:0001b01c       ?StaticEnterCriticalRegion@ContextBase@details@Concurrency@@SAXXZ 000000018001c01c f   libconcrt:ContextBase.obj
  0001:0001b024       ?SweepAliasTable@ContextBase@details@Concurrency@@QEAAXXZ 000000018001c024 f   libconcrt:ContextBase.obj
  0001:0001b134       ?SweepUnstructured@ContextBase@details@Concurrency@@QEAAXP6A_NPEAV_UnrealizedChore@23@PEAX@Z12@Z 000000018001c134 f   libconcrt:ContextBase.obj
  0001:0001b140       ?SyncPop@?$WorkStealingQueue@V_UnrealizedChore@details@Concurrency@@V_CriticalNonReentrantLock@23@@details@Concurrency@@AEAAPEAV_UnrealizedChore@23@XZ 000000018001c140 f i libconcrt:ContextBase.obj
@@ -1021,14 +1021,14 @@
  0001:0001b728       ??1?$unique_lock@Vmutex@std@@@std@@QEAA@XZ 000000018001c728 f i libconcrt:TaskCollection.obj
  0001:0001b758       ??1_TaskCollection@details@Concurrency@@QEAA@XZ 000000018001c758 f   libconcrt:TaskCollection.obj
  0001:0001b884       ??1exception_ptr@std@@QEAA@XZ 000000018001c884 f i libconcrt:TaskCollection.obj
- 0001:0001b88c       ??_G?$_MallocaArrayHolder@PEAVevent@Concurrency@@@details@Concurrency@@UEAAPEAXI@Z 000000018001c88c f i libconcrt:TaskCollection.obj
  0001:0001b88c       ??_E?$_MallocaArrayHolder@PEAVevent@Concurrency@@@details@Concurrency@@UEAAPEAXI@Z 000000018001c88c f i libconcrt:TaskCollection.obj
- 0001:0001b8e0       ??_ECancellationTokenRegistration_TaskProc@details@Concurrency@@UEAAPEAXI@Z 000000018001c8e0 f i libconcrt:TaskCollection.obj
+ 0001:0001b88c       ??_G?$_MallocaArrayHolder@PEAVevent@Concurrency@@@details@Concurrency@@UEAAPEAXI@Z 000000018001c88c f i libconcrt:TaskCollection.obj
  0001:0001b8e0       ??_GCancellationTokenRegistration_TaskProc@details@Concurrency@@UEAAPEAXI@Z 000000018001c8e0 f i libconcrt:TaskCollection.obj
- 0001:0001b938       ??_G_CancellationTokenRegistration@details@Concurrency@@MEAAPEAXI@Z 000000018001c938 f i libconcrt:TaskCollection.obj
+ 0001:0001b8e0       ??_ECancellationTokenRegistration_TaskProc@details@Concurrency@@UEAAPEAXI@Z 000000018001c8e0 f i libconcrt:TaskCollection.obj
  0001:0001b938       ??_E_CancellationTokenRegistration@details@Concurrency@@MEAAPEAXI@Z 000000018001c938 f i libconcrt:TaskCollection.obj
- 0001:0001b990       ??_G_RefCounter@details@Concurrency@@UEAAPEAXI@Z 000000018001c990 f i libconcrt:TaskCollection.obj
+ 0001:0001b938       ??_G_CancellationTokenRegistration@details@Concurrency@@MEAAPEAXI@Z 000000018001c938 f i libconcrt:TaskCollection.obj
  0001:0001b990       ??_E_RefCounter@details@Concurrency@@UEAAPEAXI@Z 000000018001c990 f i libconcrt:TaskCollection.obj
+ 0001:0001b990       ??_G_RefCounter@details@Concurrency@@UEAAPEAXI@Z 000000018001c990 f i libconcrt:TaskCollection.obj
  0001:0001b9bc       ?Find@?$Hash@PEAV_TaskCollection@details@Concurrency@@PEAV123@@details@Concurrency@@QEAAPEAUListNode@123@AEBQEAV_TaskCollection@23@PEAPEAV523@@Z 000000018001c9bc f i libconcrt:TaskCollection.obj
  0001:0001ba38       ?GetArbitraryAlias@ContextBase@details@Concurrency@@QEAAPEAV_TaskCollection@23@PEAV423@@Z 000000018001ca38 f i libconcrt:TaskCollection.obj
  0001:0001bac0       ?Insert@?$Hash@PEAV_TaskCollection@details@Concurrency@@PEAV123@@details@Concurrency@@QEAAPEAUListNode@123@AEBQEAV_TaskCollection@23@0@Z 000000018001cac0 f i libconcrt:TaskCollection.obj
@@ -1137,10 +1137,10 @@
  0001:0001fafc       ??1ThreadProxyFactoryManager@details@Concurrency@@QEAA@XZ 0000000180020afc f   libconcrt:ThreadProxyFactoryManager.obj
  0001:0001fb78       ??_E?$ThreadProxyFactory@VFreeThreadProxy@details@Concurrency@@@details@Concurrency@@UEAAPEAXI@Z 0000000180020b78 f i libconcrt:ThreadProxyFactoryManager.obj
  0001:0001fb78       ??_G?$ThreadProxyFactory@VFreeThreadProxy@details@Concurrency@@@details@Concurrency@@UEAAPEAXI@Z 0000000180020b78 f i libconcrt:ThreadProxyFactoryManager.obj
- 0001:0001fba4       ??_EFreeThreadProxy@details@Concurrency@@UEAAPEAXI@Z 0000000180020ba4 f i libconcrt:ThreadProxyFactoryManager.obj
  0001:0001fba4       ??_GFreeThreadProxy@details@Concurrency@@UEAAPEAXI@Z 0000000180020ba4 f i libconcrt:ThreadProxyFactoryManager.obj
- 0001:0001fbe4       ??_EFreeThreadProxyFactory@details@Concurrency@@UEAAPEAXI@Z 0000000180020be4 f i libconcrt:ThreadProxyFactoryManager.obj
+ 0001:0001fba4       ??_EFreeThreadProxy@details@Concurrency@@UEAAPEAXI@Z 0000000180020ba4 f i libconcrt:ThreadProxyFactoryManager.obj
  0001:0001fbe4       ??_GFreeThreadProxyFactory@details@Concurrency@@UEAAPEAXI@Z 0000000180020be4 f i libconcrt:ThreadProxyFactoryManager.obj
+ 0001:0001fbe4       ??_EFreeThreadProxyFactory@details@Concurrency@@UEAAPEAXI@Z 0000000180020be4 f i libconcrt:ThreadProxyFactoryManager.obj
  0001:0001fc10       ??_GIThreadProxyFactory@details@Concurrency@@UEAAPEAXI@Z 0000000180020c10 f i libconcrt:ThreadProxyFactoryManager.obj
  0001:0001fc10       ??_EIThreadProxyFactory@details@Concurrency@@UEAAPEAXI@Z 0000000180020c10 f i libconcrt:ThreadProxyFactoryManager.obj
  0001:0001fc3c       ?Create@FreeThreadProxyFactory@details@Concurrency@@EEAAPEAVFreeThreadProxy@23@I@Z 0000000180020c3c f i libconcrt:ThreadProxyFactoryManager.obj
@@ -1197,11 +1197,11 @@
  0001:000215bc       ?UpdateWorkState@VirtualProcessor@details@Concurrency@@QEAAX_N0@Z 00000001800225bc f   libconcrt:VirtualProcessor.obj
  0001:00021670       ?Wipe@QuickBitSet@details@Concurrency@@QEAAXXZ 0000000180022670 f i libconcrt:VirtualProcessor.obj
  0001:00021704       ??0?$ListArray@U?$ListArrayInlineLink@VWorkQueue@details@Concurrency@@@details@Concurrency@@@details@Concurrency@@QEAA@PEAVSchedulerBase@12@HH@Z 0000000180022704 f i libconcrt:ScheduleGroupBase.obj
- 0001:00021704       ??0?$ListArray@VScheduleGroupSegmentBase@details@Concurrency@@@details@Concurrency@@QEAA@PEAVSchedulerBase@12@HH@Z 0000000180022704 f i libconcrt:SchedulingRing.obj
- 0001:00021704       ??0?$ListArray@VExternalStatistics@details@Concurrency@@@details@Concurrency@@QEAA@PEAVSchedulerBase@12@HH@Z 0000000180022704 f i libconcrt:SchedulerBase.obj
- 0001:00021704       ??0?$ListArray@VWorkQueue@details@Concurrency@@@details@Concurrency@@QEAA@PEAVSchedulerBase@12@HH@Z 0000000180022704 f i libconcrt:ScheduleGroupBase.obj
  0001:00021704       ??0?$ListArray@VVirtualProcessor@details@Concurrency@@@details@Concurrency@@QEAA@PEAVSchedulerBase@12@HH@Z 0000000180022704 f i libconcrt:SchedulingNode.obj
+ 0001:00021704       ??0?$ListArray@VWorkQueue@details@Concurrency@@@details@Concurrency@@QEAA@PEAVSchedulerBase@12@HH@Z 0000000180022704 f i libconcrt:ScheduleGroupBase.obj
+ 0001:00021704       ??0?$ListArray@VScheduleGroupSegmentBase@details@Concurrency@@@details@Concurrency@@QEAA@PEAVSchedulerBase@12@HH@Z 0000000180022704 f i libconcrt:SchedulingRing.obj
  0001:00021704       ??0?$ListArray@VScheduleGroupBase@details@Concurrency@@@details@Concurrency@@QEAA@PEAVSchedulerBase@12@HH@Z 0000000180022704 f i libconcrt:SchedulerBase.obj
+ 0001:00021704       ??0?$ListArray@VExternalStatistics@details@Concurrency@@@details@Concurrency@@QEAA@PEAVSchedulerBase@12@HH@Z 0000000180022704 f i libconcrt:SchedulerBase.obj
  0001:00021834       ??0SchedulingNode@details@Concurrency@@QEAA@AEBVQuickBitSet@12@KPEAVSchedulingRing@12@@Z 0000000180022834 f   libconcrt:SchedulingNode.obj
  0001:0002190c       ??1?$ListArray@VVirtualProcessor@details@Concurrency@@@details@Concurrency@@QEAA@XZ 000000018002290c f i libconcrt:SchedulingNode.obj
  0001:00021a58       ??1SchedulingNode@details@Concurrency@@QEAA@XZ 0000000180022a58 f   libconcrt:SchedulingNode.obj
@@ -1228,8 +1228,8 @@
  0001:00022554       ??1InternalContextBase@details@Concurrency@@UEAA@XZ 0000000180023554 f   libconcrt:InternalContextBase.obj
  0001:00022590       ??1ScopedCriticalRegion@ContextBase@details@Concurrency@@QEAA@XZ 0000000180023590 f i libconcrt:InternalContextBase.obj
  0001:000225ac       ??_EInternalContextBase@details@Concurrency@@WBA@EAAPEAXI@Z 00000001800235ac f i libconcrt:InternalContextBase.obj
- 0001:000225b8       ??_GInternalContextBase@details@Concurrency@@UEAAPEAXI@Z 00000001800235b8 f i libconcrt:InternalContextBase.obj
  0001:000225b8       ??_EInternalContextBase@details@Concurrency@@UEAAPEAXI@Z 00000001800235b8 f i libconcrt:InternalContextBase.obj
+ 0001:000225b8       ??_GInternalContextBase@details@Concurrency@@UEAAPEAXI@Z 00000001800235b8 f i libconcrt:InternalContextBase.obj
  0001:000225ec       ?AddToRunnables@InternalContextBase@details@Concurrency@@MEAAXVlocation@3@@Z 00000001800235ec f   libconcrt:InternalContextBase.obj
  0001:00022894       ?Alloc@InternalContextBase@details@Concurrency@@UEAAPEAX_K@Z 0000000180023894 f   libconcrt:InternalContextBase.obj
  0001:00022904       ?Block@InternalContextBase@details@Concurrency@@UEAAXXZ 0000000180023904 f   libconcrt:InternalContextBase.obj
@@ -1242,8 +1242,8 @@
  0001:00022e84       ?FindWorkForBlockingOrNesting@InternalContextBase@details@Concurrency@@AEAAPEAV123@AEA_N0@Z 0000000180023e84 f   libconcrt:InternalContextBase.obj
  0001:00023028       ?Free@InternalContextBase@details@Concurrency@@UEAAXPEAX@Z 0000000180024028 f   libconcrt:InternalContextBase.obj
  0001:00023068       ?GetAndResetOversubscribedVProc@InternalContextBase@details@Concurrency@@QEAAPEAVVirtualProcessor@23@PEAV423@@Z 0000000180024068 f   libconcrt:InternalContextBase.obj
- 0001:00023090       ?GetId@InternalContextBase@details@Concurrency@@UEBAIXZ 0000000180024090 f   libconcrt:InternalContextBase.obj
  0001:00023090       ?Id@ScheduleGroupBase@details@Concurrency@@UEBAIXZ 0000000180024090 f   libconcrt:SchedulerBase.obj
+ 0001:00023090       ?GetId@InternalContextBase@details@Concurrency@@UEBAIXZ 0000000180024090 f   libconcrt:InternalContextBase.obj
  0001:00023094       ?GetId@InternalContextBase@details@Concurrency@@WBA@EBAIXZ 0000000180024094 f i libconcrt:InternalContextBase.obj
  0001:000230a0       ?GetProxy@InternalContextBase@details@Concurrency@@UEAAPEAUIThreadProxy@3@XZ 00000001800240a0 f   libconcrt:InternalContextBase.obj
  0001:000230a8       ?GetScheduler@InternalContextBase@details@Concurrency@@UEAAPEAUIScheduler@3@XZ 00000001800240a8 f   libconcrt:InternalContextBase.obj
@@ -1284,8 +1284,8 @@
  0001:000249e8       ??1?$ListArray@VWorkQueue@details@Concurrency@@@details@Concurrency@@QEAA@XZ 00000001800259e8 f i libconcrt:ScheduleGroupBase.obj
  0001:00024ba4       ??1?$Mailbox@V_UnrealizedChore@details@Concurrency@@@details@Concurrency@@QEAA@XZ 0000000180025ba4 f i libconcrt:ScheduleGroupBase.obj
  0001:00024c18       ??1ScheduleGroupSegmentBase@details@Concurrency@@UEAA@XZ 0000000180025c18 f   libconcrt:ScheduleGroupBase.obj
- 0001:00024c9c       ??_EScheduleGroupSegmentBase@details@Concurrency@@UEAAPEAXI@Z 0000000180025c9c f i libconcrt:ScheduleGroupBase.obj
  0001:00024c9c       ??_GScheduleGroupSegmentBase@details@Concurrency@@UEAAPEAXI@Z 0000000180025c9c f i libconcrt:ScheduleGroupBase.obj
+ 0001:00024c9c       ??_EScheduleGroupSegmentBase@details@Concurrency@@UEAAPEAXI@Z 0000000180025c9c f i libconcrt:ScheduleGroupBase.obj
  0001:00024cd0       ?Add@?$ListArray@U?$ListArrayInlineLink@VWorkQueue@details@Concurrency@@@details@Concurrency@@@details@Concurrency@@QEAAHPEAU?$ListArrayInlineLink@VWorkQueue@details@Concurrency@@@23@@Z 0000000180025cd0 f i libconcrt:ScheduleGroupBase.obj
  0001:00024e4c       ?Add@?$ListArray@VExternalStatistics@details@Concurrency@@@details@Concurrency@@QEAAHPEAVExternalStatistics@23@@Z 0000000180025e4c f i libconcrt:ScheduleGroupBase.obj
  0001:00024fc8       ?Add@?$ListArray@VScheduleGroupSegmentBase@details@Concurrency@@@details@Concurrency@@QEAAHPEAVScheduleGroupSegmentBase@23@@Z 0000000180025fc8 f i libconcrt:ScheduleGroupBase.obj
@@ -1348,8 +1348,8 @@
  0001:00027128       ??_EThreadScheduler@details@Concurrency@@WBA@EAAPEAXI@Z 0000000180028128 f i libconcrt:ThreadScheduler.obj
  0001:00027134       ??_GThreadInternalContext@details@Concurrency@@UEAAPEAXI@Z 0000000180028134 f i libconcrt:ThreadScheduler.obj
  0001:00027134       ??_EThreadInternalContext@details@Concurrency@@UEAAPEAXI@Z 0000000180028134 f i libconcrt:ThreadScheduler.obj
- 0001:00027180       ??_GThreadScheduler@details@Concurrency@@UEAAPEAXI@Z 0000000180028180 f i libconcrt:ThreadScheduler.obj
  0001:00027180       ??_EThreadScheduler@details@Concurrency@@UEAAPEAXI@Z 0000000180028180 f i libconcrt:ThreadScheduler.obj
+ 0001:00027180       ??_GThreadScheduler@details@Concurrency@@UEAAPEAXI@Z 0000000180028180 f i libconcrt:ThreadScheduler.obj
  0001:000271cc       ?AddVirtualProcessors@ThreadScheduler@details@Concurrency@@UEAAXPEAPEAUIVirtualProcessorRoot@3@I@Z 00000001800281cc f i libconcrt:ThreadScheduler.obj
  0001:000271d8       ?Create@ThreadScheduler@details@Concurrency@@SAPEAV123@AEBVSchedulerPolicy@3@@Z 00000001800281d8 f   libconcrt:ThreadScheduler.obj
  0001:00027214       ?CreateInternalContext@ThreadScheduler@details@Concurrency@@MEAAPEAVInternalContextBase@23@XZ 0000000180028214 f   libconcrt:ThreadScheduler.obj
@@ -1372,12 +1372,12 @@
  0001:00027574       ?_RethrowException@exception_ptr@std@@QEBAXXZ 0000000180028574 f i libconcrt:TaskCollectionBase.obj
  0001:00027580       ?current_exception@std@@YA?AVexception_ptr@1@XZ 0000000180028580 f i libconcrt:TaskCollectionBase.obj
  0001:00027598       ?rethrow_exception@std@@YAXVexception_ptr@1@@Z 0000000180028598 f i libconcrt:TaskCollectionBase.obj
- 0001:000275b0       ??0?$StructuredWorkStealingQueue@V_UnrealizedChore@details@Concurrency@@V_CriticalNonReentrantLock@23@@details@Concurrency@@QEAA@PEAV_CriticalNonReentrantLock@12@@Z 00000001800285b0 f i libconcrt:WorkQueue.obj
  0001:000275b0       ??0?$StructuredWorkStealingQueue@VInternalContextBase@details@Concurrency@@V_HyperNonReentrantLock@23@@details@Concurrency@@QEAA@PEAV_HyperNonReentrantLock@12@@Z 00000001800285b0 f i libconcrt:VirtualProcessor.obj
+ 0001:000275b0       ??0?$StructuredWorkStealingQueue@V_UnrealizedChore@details@Concurrency@@V_CriticalNonReentrantLock@23@@details@Concurrency@@QEAA@PEAV_CriticalNonReentrantLock@12@@Z 00000001800285b0 f i libconcrt:WorkQueue.obj
  0001:0002762c       ??0?$WorkStealingQueue@V_UnrealizedChore@details@Concurrency@@V_CriticalNonReentrantLock@23@@details@Concurrency@@QEAA@PEAV_CriticalNonReentrantLock@12@@Z 000000018002862c f i libconcrt:WorkQueue.obj
  0001:000276a4       ??0WorkQueue@details@Concurrency@@QEAA@XZ 00000001800286a4 f   libconcrt:WorkQueue.obj
- 0001:0002771c       ?DeferToAffineSearchers@Slot@?$Mailbox@V_UnrealizedChore@details@Concurrency@@@details@Concurrency@@QEBA_NXZ 000000018002871c f i libconcrt:WorkQueue.obj
  0001:0002771c       ?DeferToAffineSearchers@Slot@?$Mailbox@VInternalContextBase@details@Concurrency@@@details@Concurrency@@QEBA_NXZ 000000018002871c f i libconcrt:SchedulingNode.obj
+ 0001:0002771c       ?DeferToAffineSearchers@Slot@?$Mailbox@V_UnrealizedChore@details@Concurrency@@@details@Concurrency@@QEBA_NXZ 000000018002871c f i libconcrt:WorkQueue.obj
  0001:000277bc       ?RedetachFromScheduleGroupAtSafePoint@WorkQueue@details@Concurrency@@QEAAXPEAVScheduleGroupSegmentBase@23@@Z 00000001800287bc f   libconcrt:WorkQueue.obj
  0001:000277e4       ?Reinitialize@WorkQueue@details@Concurrency@@AEAAXXZ 00000001800287e4 f   libconcrt:WorkQueue.obj
  0001:00027850       ?RetireAtSafePoint@WorkQueue@details@Concurrency@@QEAAXPEAVScheduleGroupSegmentBase@23@@Z 0000000180028850 f   libconcrt:WorkQueue.obj
@@ -1398,8 +1398,8 @@
  0001:00027ef0       ?_SetDetached@_UnrealizedChore@details@Concurrency@@QEAAX_N@Z 0000000180028ef0 f   libconcrt:Chores.obj
  0001:00027ef4       ?_StructuredChoreWrapper@_UnrealizedChore@details@Concurrency@@CAXPEAV123@@Z 0000000180028ef4 f   libconcrt:Chores.obj
  0001:00028098       ??0VirtualProcessorRoot@details@Concurrency@@QEAA@PEAVSchedulerProxy@12@PEAUSchedulerNode@12@I@Z 0000000180029098 f   libconcrt:VirtualProcessorRoot.obj
- 0001:000280f0       ??_GVirtualProcessorRoot@details@Concurrency@@UEAAPEAXI@Z 00000001800290f0 f i libconcrt:VirtualProcessorRoot.obj
  0001:000280f0       ??_EVirtualProcessorRoot@details@Concurrency@@UEAAPEAXI@Z 00000001800290f0 f i libconcrt:VirtualProcessorRoot.obj
+ 0001:000280f0       ??_GVirtualProcessorRoot@details@Concurrency@@UEAAPEAXI@Z 00000001800290f0 f i libconcrt:VirtualProcessorRoot.obj
  0001:00028128       ?CurrentSubscriptionLevel@VirtualProcessorRoot@details@Concurrency@@UEBAIXZ 0000000180029128 f i libconcrt:VirtualProcessorRoot.obj
  0001:00028134       ?GetExecutionResourceId@VirtualProcessorRoot@details@Concurrency@@UEBAIXZ 0000000180029134 f i libconcrt:VirtualProcessorRoot.obj
  0001:00028138       ?GetId@VirtualProcessorRoot@details@Concurrency@@UEBAIXZ 0000000180029138 f i libconcrt:VirtualProcessorRoot.obj
@@ -1409,8 +1409,8 @@
  0001:000281d4       ?Subscribe@VirtualProcessorRoot@details@Concurrency@@QEAAXXZ 00000001800291d4 f   libconcrt:VirtualProcessorRoot.obj
  0001:000281e4       ?Unsubscribe@VirtualProcessorRoot@details@Concurrency@@QEAAXXZ 00000001800291e4 f   libconcrt:VirtualProcessorRoot.obj
  0001:000281f4       ??0FreeVirtualProcessorRoot@details@Concurrency@@QEAA@PEAVSchedulerProxy@12@PEAUSchedulerNode@12@I@Z 00000001800291f4 f   libconcrt:FreeVirtualProcessorRoot.obj
- 0001:0002822c       ??_GFreeVirtualProcessorRoot@details@Concurrency@@UEAAPEAXI@Z 000000018002922c f i libconcrt:FreeVirtualProcessorRoot.obj
  0001:0002822c       ??_EFreeVirtualProcessorRoot@details@Concurrency@@UEAAPEAXI@Z 000000018002922c f i libconcrt:FreeVirtualProcessorRoot.obj
+ 0001:0002822c       ??_GFreeVirtualProcessorRoot@details@Concurrency@@UEAAPEAXI@Z 000000018002922c f i libconcrt:FreeVirtualProcessorRoot.obj
  0001:00028264       ?Activate@FreeVirtualProcessorRoot@details@Concurrency@@UEAAXPEAUIExecutionContext@3@@Z 0000000180029264 f   libconcrt:FreeVirtualProcessorRoot.obj
  0001:000283a4       ?Affinitize@FreeVirtualProcessorRoot@details@Concurrency@@QEAAXPEAVFreeThreadProxy@23@@Z 00000001800293a4 f   libconcrt:FreeVirtualProcessorRoot.obj
  0001:00028458       ?Deactivate@FreeVirtualProcessorRoot@details@Concurrency@@UEAA_NPEAUIExecutionContext@3@@Z 0000000180029458 f   libconcrt:FreeVirtualProcessorRoot.obj
@@ -1473,10 +1473,10 @@
  0001:0002ac70       ?TransferReferences@WorkItem@details@Concurrency@@QEAAXPEAVInternalContextBase@23@@Z 000000018002bc70 f   libconcrt:SearchAlgorithms.obj
  0001:0002ad10       ?Invoke@RealizedChore@details@Concurrency@@QEAAXXZ 000000018002bd10 f   libconcrt:RealizedChore.obj
  0001:0002ad40       ??0ThreadVirtualProcessor@details@Concurrency@@QEAA@PEAVSchedulingNode@12@PEAUIVirtualProcessorRoot@2@@Z 000000018002bd40 f   libconcrt:ThreadVirtualProcessor.obj
- 0001:0002ad98       ??_EThreadVirtualProcessor@details@Concurrency@@UEAAPEAXI@Z 000000018002bd98 f i libconcrt:ThreadVirtualProcessor.obj
  0001:0002ad98       ??_GThreadVirtualProcessor@details@Concurrency@@UEAAPEAXI@Z 000000018002bd98 f i libconcrt:ThreadVirtualProcessor.obj
- 0001:0002adf0       memcpy                     000000018002bdf0 f   libvcruntime:memcpy.obj
+ 0001:0002ad98       ??_EThreadVirtualProcessor@details@Concurrency@@UEAAPEAXI@Z 000000018002bd98 f i libconcrt:ThreadVirtualProcessor.obj
  0001:0002adf0       memmove                    000000018002bdf0 f   libvcruntime:memcpy.obj
+ 0001:0002adf0       memcpy                     000000018002bdf0 f   libvcruntime:memcpy.obj
  0001:0002b228       _purecall                  000000018002c228 f   libvcruntime:purevirt.obj
  0001:0002b264       ?_ExecutionInCatch@@YAHPEAU_xDISPATCHER_CONTEXT@@PEBU_s_FuncInfo@@@Z 000000018002c264 f   libvcruntime:trnsctrl.obj
  0001:0002b2d8       ?_GetEstablisherFrame@@YAPEA_KPEA_KPEAU_xDISPATCHER_CONTEXT@@PEBU_s_FuncInfo@@0@Z 000000018002c2d8 f   libvcruntime:trnsctrl.obj
@@ -1651,8 +1651,8 @@
  0001:000321fc       _ismbblead                 00000001800331fc f   libucrt:ismbbyte.obj
  0001:00032210       _malloc_base               0000000180033210 f   libucrt:malloc_base.obj
  0001:00032270       _realloc_base              0000000180033270 f   libucrt:realloc_base.obj
- 0001:000322f4       ??$make_c_string_character_source@DPEAPEAD@__crt_strtox@@YA?AV?$c_string_character_source@D@0@QEBDQEAPEAD@Z 00000001800332f4 f i libucrt:strtod.obj
  0001:000322f4       ??$make_c_string_character_source@_W$$T@__crt_strtox@@YA?AV?$c_string_character_source@_W@0@QEB_W$$T@Z 00000001800332f4 f i libucrt:atox.obj
+ 0001:000322f4       ??$make_c_string_character_source@DPEAPEAD@__crt_strtox@@YA?AV?$c_string_character_source@D@0@QEBDQEAPEAD@Z 00000001800332f4 f i libucrt:strtod.obj
  0001:00032310       ?divide@__crt_strtox@@YA_KAEAUbig_integer@1@AEBU21@@Z 0000000180033310 f i libucrt:strtod.obj
  0001:000327e0       pow                        00000001800337e0 f   libucrt:pow.obj
  0001:00033e80       powf                       0000000180034e80 f   libucrt:powf.obj
@@ -1682,9 +1682,9 @@
  0001:0003610c       _initialize_onexit_table   000000018003710c f   libucrt:onexit.obj
  0001:0003614c       _register_onexit_function  000000018003714c f   libucrt:onexit.obj
  0001:000361dc       __acrt_uninitialize_command_line 00000001800371dc f   libucrt:argv_data.obj
- 0001:000361dc       ?SweepWaitNode@SingleWaitBlock@details@Concurrency@@UEAA_NXZ 00000001800371dc f   libconcrt:event.obj
- 0001:000361dc       ?do_always_noconv@?$codecvt@DDU_Mbstatet@@@std@@MEBA_NXZ 00000001800371dc f   libcpmt:cout.obj
  0001:000361dc       ?AllowGeneralFetchOfReservedContexts@SchedulerBase@details@Concurrency@@MEAA_NXZ 00000001800371dc f   libconcrt:SchedulerBase.obj
+ 0001:000361dc       ?do_always_noconv@?$codecvt@DDU_Mbstatet@@@std@@MEBA_NXZ 00000001800371dc f   libcpmt:cout.obj
+ 0001:000361dc       ?SweepWaitNode@SingleWaitBlock@details@Concurrency@@UEAA_NXZ 00000001800371dc f   libconcrt:event.obj
  0001:000362cc       __acrt_initialize          00000001800372cc f   libucrt:initialization.obj
  0001:000362e0       __acrt_thread_attach       00000001800372e0 f   libucrt:initialization.obj
  0001:000362f4       __acrt_thread_detach       00000001800372f4 f   libucrt:initialization.obj
@@ -1908,9 +1908,9 @@
  0001:00046a60       ??1_Ref_count_base@std@@UEAA@XZ 0000000180047a60 f i libcpmt:excptptr.obj
  0001:00046a6c       ??1__ExceptionPtr@@QEAA@XZ 0000000180047a6c f   libcpmt:excptptr.obj
  0001:00046b48       ??C?$shared_ptr@V__ExceptionPtr@@@std@@QEBAPEAV__ExceptionPtr@@XZ 0000000180047b48 f i libcpmt:excptptr.obj
- 0001:00046b4c       ??_G?$_Ref_count_obj_alloc@V__ExceptionPtr@@U?$_StaticAllocator@H@@@std@@UEAAPEAXI@Z 0000000180047b4c f i libcpmt:excptptr.obj
- 0001:00046b4c       ??_G?$_Ref_count_obj@V__ExceptionPtr@@@std@@UEAAPEAXI@Z 0000000180047b4c f i libcpmt:excptptr.obj
  0001:00046b4c       ??_E?$_Ref_count_obj@V__ExceptionPtr@@@std@@UEAAPEAXI@Z 0000000180047b4c f i libcpmt:excptptr.obj
+ 0001:00046b4c       ??_G?$_Ref_count_obj@V__ExceptionPtr@@@std@@UEAAPEAXI@Z 0000000180047b4c f i libcpmt:excptptr.obj
+ 0001:00046b4c       ??_G?$_Ref_count_obj_alloc@V__ExceptionPtr@@U?$_StaticAllocator@H@@@std@@UEAAPEAXI@Z 0000000180047b4c f i libcpmt:excptptr.obj
  0001:00046b4c       ??_E?$_Ref_count_obj_alloc@V__ExceptionPtr@@U?$_StaticAllocator@H@@@std@@UEAAPEAXI@Z 0000000180047b4c f i libcpmt:excptptr.obj
  0001:00046b78       ??_G?$shared_ptr@V__ExceptionPtr@@@std@@QEAAPEAXI@Z 0000000180047b78 f i libcpmt:excptptr.obj
  0001:00046c08       ??_E_Ref_count_base@std@@UEAAPEAXI@Z 0000000180047c08 f i libcpmt:excptptr.obj
@@ -1933,11 +1933,11 @@
  0001:00047348       ?create_stl_condition_variable@details@Concurrency@@YAXPEAVstl_condition_variable_interface@12@@Z 0000000180048348 f i libcpmt:cond.obj
  0001:000473dc       ?destroy@stl_condition_variable_concrt@details@Concurrency@@UEAAXXZ 00000001800483dc f i libcpmt:cond.obj
  0001:000474d0       ?notify_all@stl_condition_variable_concrt@details@Concurrency@@UEAAXXZ 00000001800484d0 f i libcpmt:cond.obj
- 0001:000474dc       ?notify_all@stl_condition_variable_win7@details@Concurrency@@UEAAXXZ 00000001800484dc f i libcpmt:cond.obj
  0001:000474dc       ?notify_all@stl_condition_variable_vista@details@Concurrency@@UEAAXXZ 00000001800484dc f i libcpmt:cond.obj
+ 0001:000474dc       ?notify_all@stl_condition_variable_win7@details@Concurrency@@UEAAXXZ 00000001800484dc f i libcpmt:cond.obj
  0001:000474e8       ?notify_one@stl_condition_variable_concrt@details@Concurrency@@UEAAXXZ 00000001800484e8 f i libcpmt:cond.obj
- 0001:000474f4       ?notify_one@stl_condition_variable_win7@details@Concurrency@@UEAAXXZ 00000001800484f4 f i libcpmt:cond.obj
  0001:000474f4       ?notify_one@stl_condition_variable_vista@details@Concurrency@@UEAAXXZ 00000001800484f4 f i libcpmt:cond.obj
+ 0001:000474f4       ?notify_one@stl_condition_variable_win7@details@Concurrency@@UEAAXXZ 00000001800484f4 f i libcpmt:cond.obj
  0001:00047500       ?wait@stl_condition_variable_concrt@details@Concurrency@@UEAAXPEAVstl_critical_section_interface@23@@Z 0000000180048500 f i libcpmt:cond.obj
  0001:00047510       ?wait@stl_condition_variable_vista@details@Concurrency@@UEAAXPEAVstl_critical_section_interface@23@@Z 0000000180048510 f i libcpmt:cond.obj
  0001:00047534       ?wait@stl_condition_variable_win7@details@Concurrency@@UEAAXPEAVstl_critical_section_interface@23@@Z 0000000180048534 f i libcpmt:cond.obj
@@ -3256,7 +3256,7 @@
  0002:000130b4       ??_C@_04GNPKBLNA@?4jpg?$AA@ 000000018005d0b4     infrared.obj
  0002:000130bc       ??_C@_05IGKADHGO@width?$AA@ 000000018005d0bc     infrared.obj
  0002:000130c4       ??_C@_06LNLHEAAG@height?$AA@ 000000018005d0c4     infrared.obj
- 0002:000130d0       ??_C@_0BL@MMAGLAEE@D?3?1irDirectSDK?1generic?4xml?$AA@ 000000018005d0d0     infrared.obj
+ 0002:000130d0       ??_C@_0BO@EKPOMFBD@D?3?1videotrans?1sdk?1generic?4xml?$AA@ 000000018005d0d0     infrared.obj
  0002:000130f0       ??_C@_0CD@MCAKKKAM@Could?5not?5open?5configuration?5fil@ 000000018005d0f0     infrared.obj
  0002:00013118       ??_C@_0CJ@OMDKEMAL@Available?5optics?5for?5camera?5with@ 000000018005d118     infrared.obj
  0002:00013144       ??_C@_05PBMHHENB@?5deg?5?$AA@ 000000018005d144     infrared.obj

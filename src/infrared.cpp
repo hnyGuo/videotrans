@@ -227,7 +227,7 @@ void Open(const FunctionCallbackInfo<Value>& args) {
 	evo::IRLogger::setVerbosity(evo::IRLOG_ERROR, evo::IRLOG_OFF, filename.c_str());
 
 	message->vc=new evo::VideoCapture;
-	char* arg = "D:/irDirectSDK/generic.xml";
+	char* arg = "D:/videotrans/sdk/generic.xml";
 	// Windows SDK is compiled using 16-bit Unicode characters
 	size_t argSize = strlen(arg) + 1;
 	wchar_t* argPath = new wchar_t[argSize];

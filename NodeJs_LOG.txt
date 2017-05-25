@@ -65,3 +65,6 @@ node-gyp configure
 
 数据库更新，新增红外图像Id:
 create table images(id int auto_increment,rgb_image_id varchar(30) not null,infra_image_id varchar(30) not null,image_class varchar(20) not null,submission_date timestamp,primary key(id),unique key(rgb_image_id));
+
+2017-5-25
+将热像仪的配置文件都整理到了D:\videotrans\sdk目录下，在新机器部署的时候就不用在拷贝irDirectSDK了。
