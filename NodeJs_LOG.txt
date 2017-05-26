@@ -68,3 +68,4 @@ create table images(id int auto_increment,rgb_image_id varchar(30) not null,infr
 
 2017-5-25
 将热像仪的配置文件都整理到了D:\videotrans\sdk目录下，在新机器部署的时候就不用在拷贝irDirectSDK了。
+热像仪starStreaming之后，等待0.5s再像服务器发送数据，这样可以过滤掉初始时刻的噪声数据。

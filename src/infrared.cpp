@@ -275,7 +275,7 @@ void Open(const FunctionCallbackInfo<Value>& args) {
 			//if (i<(devices.size() - 1))
 			//_displays[i]->showDetach();
 			//else
-			_sleep(100);
+			_sleep(500);
 			uv_work_t* req = new uv_work_t();
 			req->data = message;
 			async = uv_async_t();

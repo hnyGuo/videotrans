@@ -133,8 +133,11 @@
         var infra_id = "" + new Date().Format("yyyy-MM-dd-hh-mm-ss")+"-2";
         var capImage = imageEle.replace("##src", image).replace("##href", image).replace(/##title/g, "" + rgb_id + ".jpg");
         $("#captures").replaceWith(capImage);
-     	$("#captures").height(268.5);   
+        $("#captures").height($("#rgb_video").height());
         $(".frame-image").height($("#captures").height()-30);
+        console.log($("#rgb_video").height());
+        console.log($("#captures").height());
+        console.log($(".frame-image").height());
         $(".frame-image").width($("#captures").width()-34);
         imageUpload = image;
         imageUpload1 = image1;
@@ -273,6 +276,11 @@
 
 	$( window ).resize(function() {
   		$("#captures").height($("#rgb_video").height());
+  		$(".frame-image").height($("#captures").height()-30);
+        console.log($("#rgb_video").height());
+        console.log($("#captures").height());
+        console.log($(".frame-image").height());
+        $(".frame-image").width($("#captures").width()-34);
 	});
 
 
