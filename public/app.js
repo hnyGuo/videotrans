@@ -277,9 +277,9 @@
 	$( window ).resize(function() {
   		$("#captures").height($("#rgb_video").height());
   		$(".frame-image").height($("#captures").height()-30);
-        console.log($("#rgb_video").height());
-        console.log($("#captures").height());
-        console.log($(".frame-image").height());
+        //console.log($("#rgb_video").height());
+        //console.log($("#captures").height());
+        //console.log($(".frame-image").height());
         $(".frame-image").width($("#captures").width()-34);
 	});
 

@@ -214,8 +214,20 @@ app.use(express.static('public'));
 app.use(morgan('dev'));
 
 app.get('/',function(req,res){
-    res.sendFile(__dirname+'/index.html');   
+    res.sendFile(__dirname+'/login.html');   
     console.log('new connection'); 
+});
+
+app.post('/login',upload.single(),function(req,res){
+    //console.log(req);
+    if (req.body.username=="admin" && req.body.password=="admin"){
+      res.sendFile(__dirname+'/index.html');
+    }
+    else{
+      res.send("error");
+    }
+    console.log("username: ",req.body.username);
+    console.log("password: ",req.body.password);
 });
 
 /*app.get('/save-image',function(req,res){
