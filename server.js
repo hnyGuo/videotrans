@@ -15,7 +15,7 @@ var express = require('express')
   , openBrowser = false
   , width = 320
   , height = 240
-  , inputIndex = 2    //Camera Index
+  , inputIndex = 2    //Camera Index 2 for usb camera
   , threshold = 15
   ;
 

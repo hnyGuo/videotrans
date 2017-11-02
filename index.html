@@ -29,7 +29,7 @@
 	</head>
 
 	<body id="page-top" class="index">
-
+	<div id="trans">
 		<!-- Navigation -->
 		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
 			<div class="container">
@@ -64,38 +64,38 @@
 		<header style="background-image:url(./images/bg-main.jpg)">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4">
-						<canvas id="rgb_video" width="320" height="240" data-toggle="modal" data-target="#myModal1">抱歉，您的浏览器不支持Canvas元素。</canvas>
+					<div class="col-xs-4">
+						<canvas id="rgb_video" width="320" height="240">抱歉，您的浏览器不支持Canvas元素。</canvas>
 						<div class="intro-text">
 							<span class="skills">RGB图像</span>
 						</div>
 						<div class="row">
 							<div class="col-xs-4">
-                    			<a id='play' class="btn btn-sm btn-outline">
+                    			<a id='play' class="btn btn-xs btn-outline">
                         		<i class="fa fa-play"></i>
                     			</a>
                 			</div>
                 			<div class="col-xs-4">
-                    			<a id='pause' class="btn btn-sm btn-outline">
+                    			<a id='pause' class="btn btn-xs btn-outline">
                         		<i class="fa fa-pause"></i>
                     			</a>
                 			</div>
-							<div class="col-xs-4">
-                    			<a id='save-image' class="btn btn-sm btn-outline">
+							<div class="col-xs-4" id='takePhoto'>
+                    			<a id='save-image' class="btn btn-xs btn-outline">
                         		<i class="fa fa-camera-retro"></i> 拍照
                     			</a>
                 			</div>
 						</div>
 					</div>
 
-					<div class="col-sm-4">
-						<canvas id="inf_video" width="320" height="240" data-toggle="modal" data-target="#myModal2">抱歉，您的浏览器不支持Canvas元素。</canvas>
+					<div class="col-xs-4">
+						<canvas id="inf_video" width="320" height="240">抱歉，您的浏览器不支持Canvas元素。</canvas>
 						<div class="intro-text">
 							<span class="skills">红外图像</span>
 						</div>
 
 						<div id="image-class" class="btn-group" data-toggle="buttons" style="margin-top: 15px;margin-bottom: 15px">
-							<label class="btn btn-success">
+							<label class="btn btn-success" style="border-radius:0px">
 								<input type="radio" name="options" id="A" value="classA" autocomplete="off" checked>
 								<span class="glyphicon glyphicon-ok"></span>
 							</label>
@@ -120,33 +120,33 @@
 								<span class="glyphicon glyphicon-ok"></span>
 							</label>
 
-							<label class="btn btn-danger">
+							<label class="btn btn-danger" style="border-radius:0px">
 								<input type="radio" name="options" id="F" value="classF" autocomplete="off">
 								<span class="glyphicon glyphicon-ok"></span>
 							</label>
 						</div>
 					</div>
 
-					<div class="col-sm-4">
+					<div class="col-xs-4">
 						<div id="captures" class="thumbnail" style="height:270.5px;border-radius:10px;padding:0px;margin-bottom:5px">
     					</div>
 						<div class="intro-text">
 						<span class="skills">图像采集</span>
 						</div>
 
-						<div class="col-xs-4">
-							<a id='upload' class="btn btn-sm btn-outline center">
+						<div class="col-xs-4" id='uploadBlk'>
+							<a id='upload' class="btn btn-xs btn-outline center">
                     			<i class="fa fa-upload" aria-hidden="true"></i> 上传
                 			</a>
                 		</div>
-						<div class="col-xs-4" data-toggle="modal" data-target="#myModal3">
-							<a id='search' class="btn btn-sm btn-outline">
+						<div class="col-xs-4" id='searchBlk' data-toggle="modal" data-target="#myModal3">
+							<a id='search' class="btn btn-xs btn-outline">
 		                    	<i class="fa fa-search" aria-hidden="true"></i> 查询
 							</a>
 						</div>
-						<div class="col-xs-4" data-toggle="modal" data-target="#myModal5">
-							<a id='wifi' class="btn btn-sm btn-outline center">
-	                    		<i class="fa fa-wifi" aria-hidden="true">Wifi</i>
+						<div class="col-xs-4" id='wifiBlk' data-toggle="modal" data-target="#myModal5">
+							<a id='wifi' class="btn btn-xs btn-outline center">
+	                    		<i class="fa fa-wifi" aria-hidden="true">网络</i>
 	                		</a>
 						</div>
     				</div>
@@ -156,7 +156,7 @@
 
 		<!-- 模态框（Modal） -->
 		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		    <div class="modal-dialog" style="margin:15px 15px 15px 70px;width:800px;height:300px">
+		    <div class="modal-dialog" id='modal1' style="margin:15px 15px 15px 70px;width:800px;height:300px">
 		        <div class="modal-content">
 		            <!--div class="modal-header" style="color:#000">
 		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -190,7 +190,7 @@
 		</div>
 
 		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog" style="width:1000px">
+			<div class="modal-dialog" id='searchModal'>
 				<div class="modal-content">
 					<div class="modal-header" style="color:#000">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -244,7 +244,7 @@
 		</div>
 
 		</header>
-
+	</div>
 		<!-- Picture Database Section -->
 		<!--section id="pic-db">
 			<div class="container">
@@ -369,5 +369,19 @@
 	<!-- Theme JavaScript -->
 	<script src="js/freelancer.js"></script>
 	<script src="app.js"></script>
+	<script src="js/orientation.js"></script>
+	<script>
+		changeOrientation($('#trans'));
+
+		$("#captures").height($("#rgb_video").height());
+  		$("#captures").width($("#rgb_video").width());
+  		$(".frame-image").height($("#captures").height()-30);
+        //console.log($("#rgb_video").height());
+        //console.log($("#captures").height());
+        //console.log($(".frame-image").height());
+        $(".frame-image").width($("#captures").width()-34);
+
+
+	</script>
 	</body>
 </html>

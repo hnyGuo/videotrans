@@ -74,4 +74,98 @@ div.frame-title {
   background: #18bc9c;
   border: solid 2px #333333;
 }
-        
+
+@media screen and (orientation:portrait){
+    html{
+        width:100%;
+        height:100%;
+        overflow-y: scroll;
+       
+    }
+
+    body{
+        width:100%;
+        height:100%;
+        overflow-y:scroll;
+
+    }
+    #trans {
+        position: absolute;
+        overflow: hidden;
+    }
+}
+
+@media screen and (orientation:landscape){
+    html{
+        width:100%;
+        height:100%;
+    }
+
+    body{
+        width:100%;
+        height:100%;
+    }
+    #trans {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (min-width: 768px) {
+    #takePhoto{
+        position: relative;
+        left:-30px;
+    }
+    #searchModal{
+        width: 1000px;
+    }
+    /*#modal1{
+        margin:15px 15px 15px 70px;
+        width:800px;
+        height:300px;
+    }
+    #modal1Body{
+        height:500px;
+    }
+    }
+    #rgb_video_large{
+        height:470px;
+    }*/
+}
+
+@media (max-width: 767px) {
+    #play{
+        position: relative;
+        left:30px;
+    }
+    #pause{
+        position: relative;
+        left:0px; 
+    }
+    #takePhoto{
+        position: relative;
+        left:-80px;
+        top:40px;
+    }
+    #image-class{
+        position: relative;
+        left: 15px;
+    }
+    #uploadBlk{
+        position:relative;
+        left:22px;
+        top:2px;
+    }
+    #searchBlk{
+        position:relative;
+        left: -29px;
+        top:40px;
+    }
+    #wifiBlk{
+        position:relative;
+        left:-80px;
+        top:80px;
+    }
+}

@@ -46,8 +46,6 @@
 		img.src = image;
 	}
 	function closeCamera(){
-		$("#play").show();
-		$("#pause").hide();
 		ws.send("close");
 		ws1.send("close");
 	};
@@ -107,9 +105,6 @@
         		audio.play();
         	}
         };
-
-        $("#play").hide();
-        $("#pause").show();
 	};
 
 	Date.prototype.Format = function (fmt) { 
@@ -149,10 +144,27 @@
 
 	$("#play").click(function(){
 		openCamera();
+		var newTop=$('#play').offset().top;
+		var newLeft=$('#play').offset().left;
+		//console.log(newTop)
+		//console.log(newLeft)
+		
+		$("#play").hide();
+        $("#pause").show();
+        //console.log($('#pause').offset().top)
+		//console.log($('#pause').offset().left)
+		if(newLeft!=$('#pause').offset().left || newTop!=$('#pause').offset().top){
+			$('#pause').css({'position':'relative','left':newLeft-$('#pause').offset().left})	
+		}
+        //console.log($('#pause').offset().top)
+		//console.log($('#pause').offset().left)
 	});
 
 	$("#pause").click(function(){
 		closeCamera();
+		$("#pause").hide();
+		$("#play").show();
+        
 	});
 
 	$('#save-image').click(function(){
@@ -275,13 +287,29 @@
 	})
 
 	$( window ).resize(function() {
-  		$("#captures").height($("#rgb_video").height());
-  		$(".frame-image").height($("#captures").height()-30);
-        //console.log($("#rgb_video").height());
-        //console.log($("#captures").height());
-        //console.log($(".frame-image").height());
-        $(".frame-image").width($("#captures").width()-34);
+	  		$("#captures").height($("#rgb_video").height());
+	  		$("#captures").width($("#rgb_video").width());
+	  		$(".frame-image").height($("#captures").height()-30);
+	        //console.log($("#rgb_video").height());
+	        //console.log($("#captures").height());
+	        //console.log($(".frame-image").height());
+	        $(".frame-image").width($("#captures").width()-34);
 	});
 
+	$('#rgb_video').click(function(){
+		var width = document.documentElement.clientWidth;
+		var height =  document.documentElement.clientHeight;
+		if(width>768){
+			$('#myModal1').modal('show');
+		}
+	})
+
+	$('#inf_video').click(function(){
+		var width = document.documentElement.clientWidth;
+		var height =  document.documentElement.clientHeight;
+		if(width>768){
+			$('#myModal2').modal('show');
+		}
+	})
 
 })(jQuery);
